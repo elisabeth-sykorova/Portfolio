@@ -13,7 +13,8 @@
             <li>LinkedIn</li>
             <li>Email</li>
         </ul>
-    <p>get in touch via email at <a href="mailto:example@email.com">info@example.com</a>.</p>
+    <p>Student of Interactive Digital Art and Design </p>
+    <a href="mailto:example@email.com">info@example.com</a>.
     
     <style>
         h1{color: #ffffff;}
@@ -31,6 +32,7 @@
         font-size: 14px;
         display: flex;
         justify-content: center;
+        padding:10px;
         border-bottom: 1.5px var(--text-color) solid;
         }
 /*SOCIAL LINKS*/
