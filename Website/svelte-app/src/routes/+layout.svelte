@@ -1,5 +1,7 @@
 
 <script>
+	import Header from "$lib/components/Navigation.svelte";
+
     // Import components
     import Navigation from "$lib/components/Navigation.svelte";
 </script>
@@ -31,6 +33,12 @@
 
 <style>
     
+    header {
+        background-color: var(--secondary-color);
+        padding: 0.25rem;
+        text-align: center;
+    }
+
     main {
         padding: 0rem;
         text-align: center;

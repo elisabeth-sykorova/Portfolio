@@ -26,4 +26,5 @@
         color: var(--text-color);
         font-weight: bold;
     }
+    
 </style>

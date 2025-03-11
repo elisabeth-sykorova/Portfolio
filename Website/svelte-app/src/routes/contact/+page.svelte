@@ -9,7 +9,7 @@
     <h1>Who am I and Where to Find Me</h1>
     </div>
         <ul id="socials">
-            <li>Github</li>
+            <li>Github <img src="pic_trulli.jpg" alt="Italian Trulli"> </li>
             <li>LinkedIn</li>
             <li>Email</li>
         </ul>
@@ -35,6 +35,7 @@
         padding:10px;
         border-bottom: 1.5px var(--text-color) solid;
         }
+
 /*SOCIAL LINKS*/
         li{
             padding-inline: 10%;
