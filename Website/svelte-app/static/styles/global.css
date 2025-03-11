@@ -1,0 +1,42 @@
+/*GLOBAL CSS STYLES WITH VARIABLES*/
+
+:root {
+    --primary-color: #38265b;
+    --secondary-color: #b94a20; 
+    --backround-color: #261d18;
+    --text-color: #d3d3d3; 
+
+    --font-family: monospace;
+    --base-font-size: 18px;
+
+    --separator: 1.5px var(--text-color) solid;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+    color: var(--text-color);
+    background-color: var(--backround-color);
+    line-height: 1.5;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+}
+a{
+    color:var(--primary-color);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-medium);
+}
