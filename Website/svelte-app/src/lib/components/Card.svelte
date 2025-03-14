@@ -1,9 +1,10 @@
 <script>
     export let title = "Card Title";
     export let description = "This is a brief description of the card";
+    export let link = "Link to element page";
 </script>
 
-<div class = "card">
+<div class = "card"  on:click={ window.location.assign(link) }>
     <!-- image -->
     <img src="/placeholder.png" alt="Placeholder">
 
@@ -24,6 +25,7 @@
         overflow: hidden;
         width: 280px;
         text-align: center;
+        cursor: pointer;
         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
     }
 

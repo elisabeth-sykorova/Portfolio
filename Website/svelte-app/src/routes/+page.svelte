@@ -16,8 +16,8 @@ onMount(() =>{
 <!-- Gallery -->
 
 <div class ="gallery">
-    <a href="/contact"><Card title="Card 1" description="This is the first card" /></a>
-    <a href="/contact"><Card title="Card 2" description="This is the second card" /></a>
+   <Card title="Card 1" description="This is the first card" link="/contact"/>
+    <Card title="Card 2" description="This is the second card" link="/contact"/>
     <Card title="Card 3" description="This is the third card" />
     <Card title="Card 4" description="This is the fourth card" />
 </div>
