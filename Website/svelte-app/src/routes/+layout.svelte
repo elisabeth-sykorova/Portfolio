@@ -11,12 +11,6 @@
 <!-- Page Content -->
 <main>
     <slot />
-<!-- <div id="categories">
-    <img src="/card.png" alt="card">
-    <img src="/card.png" alt="card">
-    <img src="/card.png" alt="card">
-    <img src="/card.png" alt="card">
-</div> -->
 </main>
 
 <!-- Footer -->
@@ -48,14 +42,5 @@
         width: 100%;
         border-top: var(--separator);
     }
-
-    #categories {
-        padding: 3%;
-    }
-
-    img{
-        padding: 0.5%;
-    }
-
 
 </style>
