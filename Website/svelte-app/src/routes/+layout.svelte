@@ -1,14 +1,8 @@
 
 <script>
-	import Header from "$lib/components/Navigation.svelte";
-
     // Import components
-    import Navigation from "$lib/components/Navigation.svelte";
+    import { Navigation } from "$lib";
 </script>
-
-
-<!-- Link to global styles -->
-<link rel="stylesheet" href="/styles/global.css" />
 
 <!-- Header -->
 <header>
@@ -17,12 +11,12 @@
 <!-- Page Content -->
 <main>
     <slot />
-<div id="categories">
+<!-- <div id="categories">
     <img src="/card.png" alt="card">
     <img src="/card.png" alt="card">
     <img src="/card.png" alt="card">
     <img src="/card.png" alt="card">
-</div>
+</div> -->
 </main>
 
 <!-- Footer -->
