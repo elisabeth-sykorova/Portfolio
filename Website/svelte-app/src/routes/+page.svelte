@@ -8,91 +8,64 @@ onMount(() =>{
 </script>
 
 <div id="hero">
-<h1>Elisabeth Sykorova</h1>
-<p>Interactive Digital Art and Design</p>
+    <img src="/images/oliva.jpg" alt="hero">
+    <div class="hero-text">
+        <h1>elisabeth</h1>
+    </div>
+</div>
+
+<div class="project-list">
+
+<h2>projects:</h2>
+<ul>
+    <li>project 1</li>
+    <li>project 2</li>
+    <li>project 3</li>
+</ul>
 
 </div>
 
 <!-- Gallery -->
 
-<div class ="gallery">
+<!-- <div class ="gallery">
    <Card title="Card 1" description="This is the first card" link="/contact"/>
     <Card title="Card 2" description="This is the second card" link="/contact"/>
     <Card title="Card 3" description="This is the third card" />
     <Card title="Card 4" description="This is the fourth card" />
-</div>
+</div> -->
 
 <style>
-    #hero{background-color: var(--primary-color);
-        padding: 3rem;
-        border-top: var(--separator);
-        border-bottom: var(--separator)}
 
-    /* Flexbox for Dynamic Layout */
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px; /* Creates spacing between items */
-        justify-content: center;
-        margin-top: 2rem;
+    .project-list{
+        text-align: left;
+        margin-left: 0.5rem;
+        color: var(--secondary-color);
     }
-
-    /* Pseudo-Element: Add Decorative Lines Before Gallery */
-    .gallery::before {
-        content: "";
-        font-size: 1.5rem;
-        font-weight: bold;
+    #hero {
+        position: relative;
+        height: calc(100vh - 3rem); /* Viewport height minus header height */
+        width: 100%;
+        overflow: hidden;
     }
-
-    /* Pseudo-Element: Add Decorative Line After Gallery */
-    .gallery::after {
-        content: "";
-        width: 60%;
-        height: 3px;
-        background: linear-gradient(to right, #007bff, transparent);
-        margin: 2rem auto 0 auto;
+    
+    #hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
     }
-
-    /* Highlight the first and last child in the gallery */
-    :global(.gallery > .card:first-child) {
-        border: 3px solid gold; /* Emphasize the first card */
+    
+    .hero-text {
+        position: absolute;
+        top: 90%;
+        left: 0.5rem;
+        transform: translateY(-50%);
+        text-align: left;
     }
-
-    :global(.gallery > .card:last-child) {
-        border: 3px solid crimson; /* Emphasize the last card */
+    
+    h1 {
+        font-size: 3rem;
+        color: var(--text-color);
+        margin: 0;
     }
-
-    /* Apply a different background color to even-numbered cards */
-    :global(.gallery > .card:nth-child(even)) {
-        background-color: #ebebeb;
-    }
-
-    /* Apply a hover effect: spotlight effect on the hovered card */
-    :global(.gallery > .card:hover) {
-        transform: scale(1.1); /* Scale up the hovered card */
-        z-index: 2; /* Bring it to the front */
-    }
-
-    /* Reduce the size of adjacent siblings when a card is hovered */
-    :global(.gallery > .card:hover ~ .card) {
-        transform: scale(0.9); /* Reduce size of adjacent cards */
-        opacity: 0.8; /* Slightly fade them */
-    }
-
-    /* Reduce the size of adjacent siblings when a card is hovered */
-    :global(.gallery > .card:hover + .card) {
-        transform: scale(0.95); /* Reduce size of adjacent cards */
-        opacity: 0.9; /* Slightly fade them */
-    }
-
-    /* Apply a special styling to every third card */
-    :global(.gallery > .card:nth-child(3n)) {
-        border-left: 5px solid #98caff; /* Left accent border */
-    }
-
-    /* Exclude the first and last card from being affected by nth-child styling */
-    :global(.gallery > .card:not(:first-child):not(:last-child)) {
-        border-radius: 18px; /* Softens edges for middle cards */
-    }
-
 </style>
