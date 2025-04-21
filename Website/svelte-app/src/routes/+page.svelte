@@ -11,12 +11,13 @@ onMount(() =>{
     <img src="/images/oliva.jpg" alt="hero">
     <div class="hero-text">
         <h1>elisabeth</h1>
+        <p>a picture of oliva for now </p>
     </div>
 </div>
 
 <div class="project-list">
 
-<h2>projects:</h2>
+<h2 id="work">projects:</h2>
 <ul>
     <li>project 1</li>
     <li>project 2</li>
@@ -36,10 +37,25 @@ onMount(() =>{
 
 <style>
 
-    .project-list{
+    .project-list {
         text-align: left;
-        margin-left: 0.5rem;
+        margin-left: var(--medium-space);
         color: var(--secondary-color);
+    }
+    h2{
+        font-size: 4rem;
+    }
+    li {
+        font-size: 3rem;
+    }
+    
+    .project-list ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .project-list li {
+        margin-bottom: 0.5rem;
     }
     #hero {
         position: relative;
@@ -57,15 +73,16 @@ onMount(() =>{
     
     .hero-text {
         position: absolute;
-        top: 90%;
-        left: 0.5rem;
+        top: 40%;
+        left: var(--medium-space);
         transform: translateY(-50%);
         text-align: left;
+        color: var(--secondary-color);
+        mix-blend-mode: difference;
+        font-size: 10rem;
     }
     
     h1 {
-        font-size: 3rem;
-        color: var(--text-color);
         margin: 0;
     }
 </style>

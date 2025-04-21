@@ -1,10 +1,11 @@
+
 <nav>
     <div class="nav-container">
         <div class="nav-left">
             <a href="/">elisabeth</a>
         </div>
         <div class="nav-center">
-            <a href="/work">work</a>
+            <a href="#work">work</a>
             <a href="/about">about</a>
         </div>
         <div class="nav-right">
@@ -14,25 +15,25 @@
 </nav>
 
 <style>
-    nav {
-        width: 100%;
-        padding: var(--spacing-small) 0;
+    /* Apply smooth scrolling to the whole page */
+    :global(html) {
+        scroll-behavior: smooth;
     }
     
     .nav-container {
         display: flex;
         align-items: center;
-        font-size: 18px;
+        font-size: 20px;
         width: 100%;
         margin: 0;
         padding: 0;
-        mix-blend-mode: difference;
+        background-color: var(--background-color);
     }
     
     .nav-left {
         flex: 0 0 auto;
         text-align: left;
-        padding-left: var(--margin-size);
+        padding-left: var(--small-space);
     }
     
     .nav-center {
@@ -45,7 +46,7 @@
     .nav-right {
         flex: 0 0 auto;
         text-align: right;
-        padding-right: var(--margin-size);
+        padding-right: var(--small-space);
     }
     
     a {
