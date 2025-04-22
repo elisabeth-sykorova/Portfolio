@@ -1,14 +1,22 @@
+<script>
+    import { reveal } from 'svelte-reveal';
+
+    let revealDelay = 60;
+</script>
+
+
 <nav class="glass-nav">
     <div class="nav-container">
         <div class="nav-left">
-            <a href="/">elisabeth</a>
+            <a href="/" use:reveal={{ preset: "slide", delay: revealDelay }}>elisabeth <img src="/images/logo_prototype.png" alt="logo"></a>
+            
         </div>
         <div class="nav-center">
-            <a href="#work">work</a>
-            <a href="/about">about</a>
+            <a href="#work" use:reveal={{ preset: "slide", delay: revealDelay*2 }}>work</a>
+            <a href="/about" use:reveal={{ preset: "slide", delay: revealDelay*3 }}>cv</a>
         </div>
         <div class="nav-right">
-            <a href="/contact">contact</a>
+            <a href="/contact" use:reveal={{ preset: "slide", delay: revealDelay*4 }}>contact</a>
         </div>
     </div>
 </nav>
@@ -18,14 +26,19 @@
     :global(html) {
         scroll-behavior: smooth;
     }
+
+    img{
+        height: 10px;
+        position:center;
+    }
     
-    .glass-nav {
-        position: fixed;
+    .glass-nav {                  
+        position: fixed;               
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1000;
-        background-color: #140318e8;
+        background-color: var(--background-color-half);
     }
     
     .nav-container {

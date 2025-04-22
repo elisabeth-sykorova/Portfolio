@@ -2,12 +2,12 @@
 
 :root {
     --primary-color: #0F0F0F; /*#38265b;*/
-    --secondary-color: hsl(118, 53%, 74%); /*#b94a20;*/ 
+    --secondary-color: hsl(0, 0%, 33%); /*#b94a20;*/ 
     --secondary-opacity: hsla(118, 53%, 74%, 0.712);
-    --background-color: #140318;/*#261d18;*/
-    --text-color: #e7e7e7; 
-    --font-family: 'Wix Madefor Display', system-ui, sans-serif;
-    --inverse-color: #F0F0F0; /* Inverse of background color for contrast */
+    --background-color: #d4d4d4;/*#261d18;*/
+    --background-color-half: #d4d4d47a;
+    --text-color: #202020; 
+    --font-family: 'Hubot Sans', sans-serif;
     --base-font-size: 18px;
 
     --small-space: 0.5rem;
@@ -30,7 +30,7 @@ body{
     line-height: 1.5;
 }
 h1,h2,h3,h4,h5,h6{
-    font-weight: bold;
+    font-weight: 400;
 }
 a{
     color:var(--link-color);

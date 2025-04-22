@@ -2,6 +2,7 @@
 <script>
     // Import components
     import {Navigation} from "$lib";
+    import {MouseTrail} from "$lib";
 </script>
 
 <!-- Header -->
@@ -11,6 +12,7 @@
 <!-- Page Content -->
 <main>
     <slot />
+    <MouseTrail></MouseTrail>
 </main>
 
 <!-- Footer -->

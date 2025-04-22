@@ -1,46 +1,18 @@
 <script>
-import { onMount } from 'svelte';
-import { Card } from '$lib';
+import { reveal } from 'svelte-reveal';
 
-let introSection;
-let projectListSection;
-
-onMount(() => {
-    console.log("Home Page Loaded");
-    
-    // Set up Intersection Observer
-    const observerOptions = {
-        root: null, // viewport
-        rootMargin: '0px',
-        threshold: 0.5 // trigger when 25% of the element is visible
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                entry.target.classList.remove('hidden');
-                // Unobserve the element once it's visible so it stays visible
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    
-    // Observe the intro and project-list sections
-    if (introSection) observer.observe(introSection);
-    if (projectListSection) observer.observe(projectListSection);
-});
+let revealDelay = 60;
 </script>
 
 <div id="hero">
     <!-- <img src="/images/oliva.jpg" alt="hero"> -->
     <div class="hero-text">
-        <h1>elisabeth</h1>
-        <h2>interactive digital art and design </h2>
+        <h1 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*10 }}>elisabeth</h1>
+        <h2 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*11 }}>interactive digital art and design </h2>
     </div>
 </div>
 
-<div id="intro" class="hidden" bind:this={introSection}>
+<div id="intro" use:reveal={{ preset: "fly"}}>
 <p>
     maybe something about what i do in short yes yes yes
     <br>
@@ -49,7 +21,7 @@ onMount(() => {
 </div>
 
 
-<div class="project-list hidden" bind:this={projectListSection}>
+<div class="project-list" use:reveal={{ preset: "fly"}}>
 
 <h2 id="work">projects:</h2>
 <ul>
@@ -139,18 +111,5 @@ onMount(() => {
     h2 {
         font-size: 2.25rem;
     }
-    /* Animation classes */
-    .hidden {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    
-    .visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    #intro, .project-list {
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
+    /* Animation is now handled by svelte-reveal */
 </style>
