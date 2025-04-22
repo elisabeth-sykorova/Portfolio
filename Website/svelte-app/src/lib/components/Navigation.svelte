@@ -1,5 +1,4 @@
-
-<nav>
+<nav class="glass-nav">
     <div class="nav-container">
         <div class="nav-left">
             <a href="/">elisabeth</a>
@@ -20,20 +19,30 @@
         scroll-behavior: smooth;
     }
     
+    .glass-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #140318e8;
+    }
+    
     .nav-container {
         display: flex;
         align-items: center;
         font-size: 20px;
         width: 100%;
         margin: 0;
-        padding: 0;
-        background-color: var(--background-color);
+        padding: 0.25rem;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        
     }
-    
     .nav-left {
         flex: 0 0 auto;
         text-align: left;
-        padding-left: var(--small-space);
+        padding-left: var(--bigger-space);
     }
     
     .nav-center {
@@ -46,18 +55,19 @@
     .nav-right {
         flex: 0 0 auto;
         text-align: right;
-        padding-right: var(--small-space);
+        padding-right: var(--bigger-space);
     }
     
     a {
         text-decoration: none;
-        color: var(--secondary-color);
+        color: var(--text-color);
         transition: transform 0.3s ease, color 0.3s ease;
         display: inline-block;
-    }
 
-    a:hover{
+    }
+    
+    a:hover {
         transform: translateY(-3px);
-        color: var(--text-color);
+        color: var(--secondary-color);
     }
 </style>

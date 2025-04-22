@@ -2,20 +2,54 @@
 import { onMount } from 'svelte';
 import { Card } from '$lib';
 
-onMount(() =>{
+let introSection;
+let projectListSection;
+
+onMount(() => {
     console.log("Home Page Loaded");
+    
+    // Set up Intersection Observer
+    const observerOptions = {
+        root: null, // viewport
+        rootMargin: '0px',
+        threshold: 0.5 // trigger when 25% of the element is visible
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                entry.target.classList.remove('hidden');
+                // Unobserve the element once it's visible so it stays visible
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observe the intro and project-list sections
+    if (introSection) observer.observe(introSection);
+    if (projectListSection) observer.observe(projectListSection);
 });
 </script>
 
 <div id="hero">
-    <img src="/images/oliva.jpg" alt="hero">
+    <!-- <img src="/images/oliva.jpg" alt="hero"> -->
     <div class="hero-text">
         <h1>elisabeth</h1>
-        <p>a picture of oliva for now </p>
+        <h2>interactive digital art and design </h2>
     </div>
 </div>
 
-<div class="project-list">
+<div id="intro" class="hidden" bind:this={introSection}>
+<p>
+    maybe something about what i do in short yes yes yes
+    <br>
+    button to about me
+</p>
+</div>
+
+
+<div class="project-list hidden" bind:this={projectListSection}>
 
 <h2 id="work">projects:</h2>
 <ul>
@@ -38,9 +72,14 @@ onMount(() =>{
 <style>
 
     .project-list {
+        height: 100vh;
         text-align: left;
         margin-left: var(--medium-space);
-        color: var(--secondary-color);
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 0;
     }
     h2{
         font-size: 4rem;
@@ -63,8 +102,18 @@ onMount(() =>{
         width: 100%;
         overflow: hidden;
     }
+
+    #intro{
+        height: 20vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 var(--medium-space);
+    }
     
     #hero img {
+        transform: translate(0%, 3.5%);
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -74,15 +123,34 @@ onMount(() =>{
     .hero-text {
         position: absolute;
         top: 40%;
-        left: var(--medium-space);
-        transform: translateY(-50%);
-        text-align: left;
-        color: var(--secondary-color);
-        mix-blend-mode: difference;
-        font-size: 10rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: var(--text-color);
+        font-size: 4rem;
     }
     
     h1 {
         margin: 0;
+    }
+    #work{
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.25rem;
+    }
+    /* Animation classes */
+    .hidden {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    
+    .visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    #intro, .project-list {
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     }
 </style>

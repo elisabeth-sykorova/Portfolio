@@ -1,7 +1,7 @@
 
 <script>
     // Import components
-    import { Navigation } from "$lib";
+    import {Navigation} from "$lib";
 </script>
 
 <!-- Header -->
@@ -28,7 +28,6 @@
         left: 0;
         width: 100%;
         z-index: 100;
-        mix-blend-mode:hard-light;
     }
 
     

@@ -5,17 +5,17 @@
     --secondary-color: hsl(118, 53%, 74%); /*#b94a20;*/ 
     --secondary-opacity: hsla(118, 53%, 74%, 0.712);
     --background-color: #140318;/*#261d18;*/
-    --text-color: #d3d3d3; 
+    --text-color: #e7e7e7; 
     --font-family: 'Wix Madefor Display', system-ui, sans-serif;
     --inverse-color: #F0F0F0; /* Inverse of background color for contrast */
     --base-font-size: 18px;
 
     --small-space: 0.5rem;
-    --medium-space: 2rem;
+    --bigger-space: 1.25rem;
+    --medium-space: 10rem;
     --max-width: 1200px;
-    --spacing-medium: 1rem;
 
-    --separator: 1.5px solid var(--secondary-color);
+    --separator: 1.5px solid var(--text-color);
 }
 *{
     margin: 0;
