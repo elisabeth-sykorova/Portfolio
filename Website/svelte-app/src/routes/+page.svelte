@@ -32,7 +32,7 @@ const project1 = {
 
 </script>
 
-<div id="hero">
+<div id="hero" style="position: relative; z-index: 1;">
     <!-- <img src="/images/oliva.jpg" alt="hero"> -->
     <div class="hero-text">
         <h1 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*10 }}>elisabeth</h1>
@@ -68,7 +68,7 @@ const project1 = {
 {#each project.category as category}
   {#if category === chosenCategory}
 
-  <div id="entire-project"use:reveal={{ preset: "fly"}}>
+  <div id="entire-project" use:reveal={{ preset: "fly"}} style="position: relative; z-index: 1;">
     <div id="projects">
         <a href="/{project.page}">
         <img src="/images/{project.img}" alt="project">
@@ -97,6 +97,22 @@ const project1 = {
 </h2>
 
 
+<div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+ </div>
+
+ 
 
 <style>
     :global(html) {
@@ -112,6 +128,8 @@ const project1 = {
         margin-top: 10%;
         margin-bottom: 10%;
         font-size: 2rem;
+        position: relative;
+        z-index: 1;
     }
     .logo-container {
         display: flex;
@@ -172,6 +190,7 @@ const project1 = {
     }
 
     
+    
     .project-list {
         text-align: center;
         color: var(--text-color);
@@ -179,10 +198,11 @@ const project1 = {
         flex-direction: column;
         justify-content: center;
         margin-top: 20rem;
-    }
-    h2{
+        position: relative;
+        z-index: 1;
         font-size: 4rem;
     }
+
 
     button{
         font-family: var(--font-family);
@@ -212,6 +232,8 @@ const project1 = {
         flex-direction: column;
         justify-content: center;
         margin-top: 20rem;
+        position: relative;
+        z-index: 1;
     }
     
     #hero img {
@@ -240,4 +262,144 @@ const project1 = {
         margin-bottom: 1rem;
     }
     /* Animation is now handled by svelte-reveal */
+
+    @keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #cfcfcf;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background span {
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 45;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #ededed;
+    top: 94%;
+    left: 62%;
+    animation-duration: 22s;
+    animation-delay: -31s;
+    transform-origin: -7vw 2vh;
+    box-shadow: 100vmin 0 12.854635182458411vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #ededed;
+    top: 83%;
+    left: 22%;
+    animation-duration: 36s;
+    animation-delay: -19s;
+    transform-origin: -6vw 20vh;
+    box-shadow: -100vmin 0 13.36585824247817vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #ededed;
+    top: 74%;
+    left: 18%;
+    animation-duration: 10s;
+    animation-delay: -4s;
+    transform-origin: 18vw -3vh;
+    box-shadow: 100vmin 0 13.03396788093905vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #ededed;
+    top: 55%;
+    left: 79%;
+    animation-duration: 26s;
+    animation-delay: -4s;
+    transform-origin: -16vw 20vh;
+    box-shadow: -100vmin 0 12.945415346585264vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #ededed;
+    top: 62%;
+    left: 66%;
+    animation-duration: 45s;
+    animation-delay: -1s;
+    transform-origin: 14vw 22vh;
+    box-shadow: -100vmin 0 12.739353426182024vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #ededed;
+    top: 55%;
+    left: 36%;
+    animation-duration: 6s;
+    animation-delay: -27s;
+    transform-origin: -17vw 4vh;
+    box-shadow: -100vmin 0 12.760383004883787vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #ededed;
+    top: 77%;
+    left: 2%;
+    animation-duration: 19s;
+    animation-delay: -7s;
+    transform-origin: -24vw 0vh;
+    box-shadow: -100vmin 0 12.851952212086125vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #ededed;
+    top: 92%;
+    left: 42%;
+    animation-duration: 46s;
+    animation-delay: -46s;
+    transform-origin: -19vw -7vh;
+    box-shadow: -100vmin 0 13.21066056938132vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #ededed;
+    top: 37%;
+    left: 36%;
+    animation-duration: 10s;
+    animation-delay: -32s;
+    transform-origin: -24vw 23vh;
+    box-shadow: -100vmin 0 13.380017884256299vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #ededed;
+    top: 64%;
+    left: 88%;
+    animation-duration: 43s;
+    animation-delay: -47s;
+    transform-origin: -18vw 3vh;
+    box-shadow: -100vmin 0 13.254028955934459vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: #ededed;
+    top: 84%;
+    left: 6%;
+    animation-duration: 26s;
+    animation-delay: -38s;
+    transform-origin: 10vw 0vh;
+    box-shadow: -100vmin 0 13.150690606333166vmin currentColor;
+}
+.background span:nth-child(11) {
+    color: #ededed;
+    top: 36%;
+    left: 82%;
+    animation-duration: 17s;
+    animation-delay: -33s;
+    transform-origin: 18vw 4vh;
+    box-shadow: 100vmin 0 12.961230186861755vmin currentColor;
+}
+
 </style>
