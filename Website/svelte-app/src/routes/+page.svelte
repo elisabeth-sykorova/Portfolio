@@ -99,6 +99,9 @@ const project1 = {
 
 
 <style>
+    :global(html) {
+        scroll-behavior: smooth;
+    }
 
     #cv{
         display: flex;

@@ -39,12 +39,15 @@
                 <div class="copy-feedback" transition:fade={{ duration: 300 }}>email copied</div>
                 {/if}
             </div>
-            <a class="icon" href="/contact" use:reveal={{ preset: "slide", delay: revealDelay*4 }}><img class="social-icon" src="/images/linkedin.png" alt="linked in icon"></a>
+            <a class="icon" href="https://www.linkedin.com/in/elisabeth-sykorova-7a2981354/" target="_blank" use:reveal={{ preset: "slide", delay: revealDelay*4 }}><img class="social-icon" src="/images/linkedin.png" alt="linked in icon"></a>
         </div>
     </div>
 </nav>
 
 <style>
+    html{
+        scroll-behavior: smooth;
+    }
     /* Style for the copied state */
     .email-container {
         position: relative;
