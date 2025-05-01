@@ -31,7 +31,8 @@
         height: 10px;
         position:center;
     }
-    
+
+
     .glass-nav {                  
         position: fixed;               
         top: 0;

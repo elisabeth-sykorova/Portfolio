@@ -1,7 +1,26 @@
 <script>
 import { reveal } from 'svelte-reveal';
+import { goto } from "$app/navigation";
 
 let revealDelay = 60;
+
+const project1 = {
+   name: "Buzz vs The Harvesters",
+   img: "oliva.jpg",
+   category: ["all", "games"]
+ };
+
+ const project2 = {
+   name: "Pixels",
+   img: "oliva.jpg",
+   category: ["all", "ui"]
+ };
+
+ let projects = [project1, project2];
+
+ let chosenCategory = "all";
+
+
 </script>
 
 <div id="hero">
@@ -24,11 +43,20 @@ let revealDelay = 60;
 <div class="project-list" use:reveal={{ preset: "fly"}}>
 
 <h2 id="work">projects:</h2>
-<ul>
-    <li>project 1</li>
-    <li>project 2</li>
-    <li>project 3</li>
-</ul>
+<button on:click={() => chosenCategory = "all"}> all</button>
+<button on:click={() => chosenCategory = "games"}> games</button>
+<button on:click={() => chosenCategory = "ui"}> ui</button>
+
+
+{#each projects as project}
+{#each project.category as category}
+  {#if category === chosenCategory}
+    <div>
+      {project.name}
+    </div>
+  {/if}
+{/each}
+{/each}
 
 </div>
 
