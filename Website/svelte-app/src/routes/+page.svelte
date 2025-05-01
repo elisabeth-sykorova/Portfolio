@@ -93,7 +93,7 @@ const project1 = {
 {/each}
 
 <h2 id="cv">
-<a href="/CV_Elisabeth_Sýkorová.pdf">cv</a>
+<a href="/CV_Elisabeth_Sýkorová.pdf" target="_blank">cv</a>
 </h2>
 
 
