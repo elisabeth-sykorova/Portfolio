@@ -45,9 +45,6 @@
 </nav>
 
 <style>
-    html{
-        scroll-behavior: smooth;
-    }
     /* Style for the copied state */
     .email-container {
         position: relative;
