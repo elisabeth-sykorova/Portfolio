@@ -13,10 +13,11 @@
         </div>
         <div class="nav-center">
             <a href="#work" use:reveal={{ preset: "slide", delay: revealDelay*2 }}>work</a>
-            <a href="/about" use:reveal={{ preset: "slide", delay: revealDelay*3 }}>cv</a>
+            <a href="#cv" use:reveal={{ preset: "slide", delay: revealDelay*3 }}>cv</a>
         </div>
         <div class="nav-right">
-            <a href="/contact" use:reveal={{ preset: "slide", delay: revealDelay*4 }}>contact</a>
+            <a class="icon" href="/contact" use:reveal={{ preset: "slide", delay: revealDelay*4 }}><img class="social-icon" src="/images/linkedin.png" alt="linked in icon"></a>
+            <a href="/contact" use:reveal={{ preset: "slide", delay: revealDelay*4 }}>@</a>
         </div>
     </div>
 </nav>
@@ -27,9 +28,20 @@
         scroll-behavior: smooth;
     }
 
-    img{
+    .nav-left img {
         height: 10px;
-        position:center;
+        position: center;
+    }
+
+    .social-icon {
+        height: 2.2rem;
+        width: auto;
+        vertical-align: middle;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
     }
 
 
@@ -63,12 +75,16 @@
         flex: 1;
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 2rem;
+        margin-right:3.5%;
     }
     
     .nav-right {
         flex: 0 0 auto;
         text-align: right;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
         padding-right: var(--bigger-space);
     }
     
@@ -76,7 +92,7 @@
         text-decoration: none;
         color: var(--text-color);
         transition: transform 0.3s ease, color 0.3s ease;
-        display: inline-block;
+        display: inline-block; 
 
     }
     
