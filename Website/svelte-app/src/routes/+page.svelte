@@ -92,10 +92,12 @@ const project1 = {
 {/each}
 {/each}
 
-<h2 id="cv">
-<a href="/CV_Elisabeth_Sýkorová.pdf" target="_blank">cv</a>
-</h2>
 
+<div id="cv-download">
+<h2 id="cv">
+<a href="/CV_Elisabeth_Sýkorová.pdf" target="_blank" >cv<img src="/images/download.png" alt="download button icon" id="download-icon"></a>
+</h2>
+</div>
 
 <div class="background">
     <span></span>
@@ -117,6 +119,26 @@ const project1 = {
 <style>
     :global(html) {
         scroll-behavior: smooth;
+    }
+
+    #download-icon{
+        width:2rem;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 1rem;
+    }
+
+    #cv-download {
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    #cv-download a:hover {
+        text-decoration: none;
+    }
+
+    #cv-download:hover {
+        transform: translateY(-3px);
+        color: var(--secondary-color);
     }
 
     #cv{
@@ -221,6 +243,8 @@ const project1 = {
     button:hover, button:focus{
         color: var(--background-color);
         background-color: var(--text-color);
+        font-size: 1.5rem;
+        cursor: pointer;
     }
 
 

@@ -1,5 +1,6 @@
 /*GLOBAL CSS STYLES WITH VARIABLES*/
 
+
 :root {
     --primary-color: #0F0F0F; /*#38265b;*/
     --secondary-color: hsl(0, 0%, 33%); /*#b94a20;*/ 
@@ -36,9 +37,7 @@ body{
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.5;
-    background-image: linear-gradient(#e8e8e8 2px, transparent 2px), linear-gradient(to right, #e8e8e8 2px, transparent 2px);
-    background-size: 32px 32px;
-    background-color: #f3f3f3;
+    background-color: #cfcfcf;
     }
 
 /* Pattern Classes - Add one of these classes to the body element to apply a pattern */
