@@ -1,57 +1,111 @@
-<script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
     import { onMount } from 'svelte';
-    onMount(() =>{
-        console.log("Contacts loaded");
+    import { slide } from 'svelte/transition';
+    import TableOfContents from '$lib/components/TableOfContents.svelte';
+
+
+    
+    // Define sections for table of contents
+    const tocSections = [
+        { id: 'intro', title: 'Introduction', level: 2 },
+        { id: 'animation', title: 'Animation', level: 2 },
+        { id: 'animation-buzz', title: 'Buzzz', level: 3 },
+        { id: 'animation-enemies', title: 'Enemies', level: 3 },
+        { id: 'animation-environment', title: 'Environment', level: 3 },
+        { id: 'texturing', title: 'Texturing', level: 2 },
+        { id: 'texturing-mushrooms', title: 'Mushrooms', level: 3 },
+        { id: 'texturing-skybox', title: 'Skybox & Color Correction', level: 3 },
+        { id: 'ui', title: 'Font & UI elements', level: 2 },
+        { id: 'process', title: 'The Creation Process', level: 2 },
+        { id: 'end', title: 'Trailer & Links', level: 2 }
+    ];
+    
+    let isMobile = false;
+    
+    onMount(() => {
+        console.log("Buzz page loaded");
+        isMobile = window.innerWidth <= 768;
+        window.addEventListener('resize', () => {
+            isMobile = window.innerWidth <= 768;
+        });
     });
 </script>
 
-<div id="content">
-<h1>
-BUZZ VS THE HARVESTERS
-</h1>
 
 
-<div id="intro">
-<p>
-    A game created for the Games Fleadh 2025 Competition.
-</p>
-<p>
-    Won an award for Best Original in Game Assets
-</p>
-<p>
-    roles: art direction, animation, texturing, font & ui
-</p>
-<p> teammates: David Hajek, Pavel Dobias, Lucy Arthur, Robert McGregor</p>
-</div>
+<div class="page-layout">
+    <div id="content">
+        <h1 id="title">
+            BUZZ VS THE HARVESTERS
+        </h1>
 
-<div id="animation">
-<h2>Animation</h2>
-<h3>Buzzz</h3>
-<iframe src="https://setuo365-my.sharepoint.com/personal/c00301316_setu_ie/_layouts/15/embed.aspx?UniqueId=ee5c1aba-f23f-4cda-8aec-71846163f31c&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen title="Buzzz_Animations.mp4"></iframe>
-<h3>Enemies</h3>
-<h3>Environment</h3>
-</div>
+        <div id="intro">
+            <h2>Introduction</h2>
+            <p>
+                A game created for the Games Fleadh 2025 Competition.
+            </p>
+            <p>
+                Won an award for Best Original in Game Assets
+            </p>
+            <p>
+                roles: art direction, animation, texturing, font & ui
+            </p>
+            <p> teammates: David Hajek, Pavel Dobias, Lucy Arthur, Robert McGregor</p>
+        </div>
 
-<div id="texturing">
-<h2>Texturing</h2>
-<h3>Mushrooms</h3>
-<h3>Skybox & Overall Color Correction</h3>
-</div>
+        <div id="animation">
+            <h2>Animation</h2>
+            <div id="animation-buzz">
+                <h3>Buzzz</h3>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xn725u_cIbU?si=2g_Pr2OijrEapBFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="animation-enemies">
+                <h3>Swarmer</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/J3aXm9T3Aoc?si=6zDaCH6uiFXOe76f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Feeder</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/COWe8CeCq8Y?si=7lJBaqGorHTUk4Fd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div id="animation-environment">
+                <h3>Environment</h3>
+            </div>
+        </div>
 
-<div id="ui">
-<h2>Font & UI elements</h2>
-</div>
-<div id ='process'>
-<h2>The Creation Process</h2>
-</div>
+        <div id="texturing">
+            <h2>Texturing</h2>
+            <div id="texturing-mushrooms">
+                <h3>Mushrooms</h3>
+            </div>
+            <div id="texturing-skybox">
+                <h3>Skybox & Overall Color Correction</h3>
+            </div>
+        </div>
 
-<div id='end'>
-<iframe src="https://setuo365-my.sharepoint.com/personal/c00301316_setu_ie/_layouts/15/embed.aspx?UniqueId=e1d77e12-393f-475a-9613-dcec36ac8e35&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="BuzzzVsTheHarvestersTrailer.mp4"></iframe>
+        <div id="ui">
+            <h2>Font & UI elements</h2>
+        </div>
+        
+        <div id="process">
+            <h2>The Creation Process</h2>
+        </div>
 
-<br>
-<a href="https://reverend-speed.itch.io/buzzz-vs-the-harvesters">Link to our itch.io page</a>
-</div>
+        <div id="end">
+            <h2>Trailer & Links</h2>
+            <iframe src="https://setuo365-my.sharepoint.com/personal/c00301316_setu_ie/_layouts/15/embed.aspx?UniqueId=e1d77e12-393f-475a-9613-dcec36ac8e35&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="BuzzzVsTheHarvestersTrailer.mp4"></iframe>
 
+            <br>
+            <a href="https://reverend-speed.itch.io/buzzz-vs-the-harvesters">Link to our itch.io page</a>
+        </div>
+    </div>
+    
+    {#if !isMobile}
+        <aside class="toc-sidebar">
+            <TableOfContents sections={tocSections} />
+        </aside>
+    {:else}
+        <div class="mobile-toc">
+            <TableOfContents sections={tocSections} />
+        </div>
+    {/if}
 </div>
 
 
@@ -77,33 +131,60 @@ BUZZ VS THE HARVESTERS
     h1 {
         margin-top: 10%;
         font-size: 4rem;
-        justify-content: center;
         display: flex;
     }
 
     h2 {
         margin-top: 10%;
+        scroll-margin-top: 100px; /* Add spacing for anchor links */
     }
 
     h3 {
         margin-top: 10%;
+        scroll-margin-top: 100px; /* Add spacing for anchor links */
     }
 
+    .page-layout {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
     #content {
-        display: block;
-        flex-direction: column;
-        align-items: flex-start; /* Aligns text to the left */
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center; /* Ensures text alignment is left */
-        width: fit-content; /* Adjusts the width to fit the content */
+        flex: 1;
+        max-width: 800px;
     }
+    
+    .toc-sidebar {
+        flex: 0 0 250px;
+        margin-left: 2rem;
+    }
+    
+    .mobile-toc {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 1000;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .page-layout {
+            display: block;
+            padding: 0 1rem;
+        }
 
+        #content {
+            max-width: 100%;
+        }
 
-
-
-
+        .mobile-toc {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 1000;
+        }
+    }
+    
     /*background*/
 
     @keyframes move {
