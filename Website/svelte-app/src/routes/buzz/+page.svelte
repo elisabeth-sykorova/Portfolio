@@ -3,9 +3,9 @@
     onMount(() =>{
         console.log("Contacts loaded");
     });
-    </script>
+</script>
 
-
+<div id="content">
 <h1>
 BUZZ VS THE HARVESTERS
 </h1>
@@ -21,9 +21,38 @@ BUZZ VS THE HARVESTERS
 <p>
     roles: art direction, animation, texturing, font & ui
 </p>
+<p> teammates: David Hajek, Pavel Dobias, Lucy Arthur, Robert McGregor</p>
 </div>
 
+<div id="animation">
+<h2>Animation</h2>
+<h3>Buzzz</h3>
+<iframe src="https://setuo365-my.sharepoint.com/personal/c00301316_setu_ie/_layouts/15/embed.aspx?UniqueId=ee5c1aba-f23f-4cda-8aec-71846163f31c&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen title="Buzzz_Animations.mp4"></iframe>
+<h3>Enemies</h3>
+<h3>Environment</h3>
+</div>
 
+<div id="texturing">
+<h2>Texturing</h2>
+<h3>Mushrooms</h3>
+<h3>Skybox & Overall Color Correction</h3>
+</div>
+
+<div id="ui">
+<h2>Font & UI elements</h2>
+</div>
+<div id ='process'>
+<h2>The Creation Process</h2>
+</div>
+
+<div id='end'>
+<iframe src="https://setuo365-my.sharepoint.com/personal/c00301316_setu_ie/_layouts/15/embed.aspx?UniqueId=e1d77e12-393f-475a-9613-dcec36ac8e35&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="BuzzzVsTheHarvestersTrailer.mp4"></iframe>
+
+<br>
+<a href="https://reverend-speed.itch.io/buzzz-vs-the-harvesters">Link to our itch.io page</a>
+</div>
+
+</div>
 
 
 <div class="background">
@@ -44,6 +73,7 @@ BUZZ VS THE HARVESTERS
 
 
 <style>
+
     h1 {
         margin-top: 10%;
         font-size: 4rem;
@@ -51,8 +81,15 @@ BUZZ VS THE HARVESTERS
         display: flex;
     }
 
+    h2 {
+        margin-top: 10%;
+    }
 
-    #intro {
+    h3 {
+        margin-top: 10%;
+    }
+
+    #content {
         display: block;
         flex-direction: column;
         align-items: flex-start; /* Aligns text to the left */
@@ -62,6 +99,7 @@ BUZZ VS THE HARVESTERS
         text-align: center; /* Ensures text alignment is left */
         width: fit-content; /* Adjusts the width to fit the content */
     }
+
 
 
 

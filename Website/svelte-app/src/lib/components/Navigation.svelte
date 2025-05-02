@@ -51,9 +51,6 @@
         <div class="nav-left">
             <a href="/" use:reveal={{ preset: "slide", delay: revealDelay }}>elisabeth <img src="/images/logo_prototype.png" alt="logo"></a>
         </div>
-        
-        <!-- Desktop Navigation -->
-        {#if !isMobile}
             <div class="nav-center">
                 <a href="/#work" use:reveal={{ preset: "slide", delay: revealDelay*2 }}>work</a>
                 <a href="/#cv" use:reveal={{ preset: "slide", delay: revealDelay*3 }}>cv</a>
@@ -72,53 +69,7 @@
                     <img class="social-icon" src="/images/linkedin.png" alt="linked in icon">
                 </a>
             </div>
-        {:else}
-            <!-- Mobile Hamburger Button -->
-            <button 
-                class="hamburger-button" 
-                on:click={toggleMenu}
-                aria-expanded={menuOpen}
-                aria-controls="mobile-menu"
-                aria-label={menuOpen ? "Close menu" : "Open menu"}
-            >
-                <span class="hamburger-line" class:active={menuOpen}></span>
-                <span class="hamburger-line" class:active={menuOpen}></span>
-                <span class="hamburger-line" class:active={menuOpen}></span>
-            </button>
-        {/if}
-    </div>
-    
-    <!-- Mobile Menu -->
-    {#if isMobile && menuOpen}
-        <div 
-            id="mobile-menu-backdrop"
-            class="mobile-menu-backdrop"
-            transition:fade={{ duration: 200 }}
-        ></div>
-        <div 
-            id="mobile-menu"
-            class="mobile-menu"
-            transition:slide={{ duration: 300, easing: t => 1 - Math.pow(1 - t, 3) }}
-            role="menu"
-        >
-            <div class="mobile-menu-items">
-                <a href="/#work" on:click={closeMenu} role="menuitem">work</a>
-                <a href="/#cv">cv</a>
-                <div class="mobile-menu-social">
-                    <button class="email-copy mobile-email" on:click={copyEmail}>
-                        <span class="email-symbol">@</span>
-                        <img class="copy-icon" src="/images/copy.png" alt="copy icon">
-                    </button>
-                    <a class="icon" href="https://www.linkedin.com/in/elisabeth-sykorova-7a2981354/" target="_blank">
-                        <img class="social-icon" src="/images/linkedin.png" alt="linked in icon">
-                    </a>
-                </div>
-                {#if copyFeedback}
-                    <div class="copy-feedback mobile-feedback" transition:fade={{ duration: 300 }}>email copied</div>
-                {/if}
-            </div>
         </div>
-    {/if}
 </nav>
 
 <style>
@@ -201,67 +152,7 @@
         align-items: center;
         padding-right: var(--bigger-space);
     }
-    
-    
-    /* Mobile menu styles */
-    .mobile-menu-backdrop {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-    }
-    
-    .mobile-menu {
-        position: fixed;
-        top: 55px; /* Align with nav height */
-        left: 0;
-        width: 100%;
-        background-color: var(--background-color);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        z-index: 1001;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid var(--text-color-soft);
-    }
-    
-    .mobile-menu-items {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-    }
-    
-    .mobile-menu-items a {
-        padding: 1rem 0;
-        font-size: 1.2rem;
-        text-align: center;
-        border-bottom: 1px solid var(--text-color-soft);
-    }
-    
-    .mobile-menu-items a:last-child {
-        border-bottom: none;
-    }
-    
-    .mobile-menu-social {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        margin-top: 1rem;
-        padding: 1rem 0;
-    }
-    
-    .mobile-email {
-        width: 2rem;
-        height: 2rem;
-    }
-    
-    .mobile-feedback {
-        text-align: center;
-        position: relative;
-        margin-top: 0.5rem;
-    }
+
     
     a {
         text-decoration: none;
@@ -353,15 +244,6 @@
             padding: 0.4rem 0.8rem;
             font-size: 16px;
         }
-        
-        .mobile-menu-items a {
-            padding: 0.8rem 0;
-            font-size: 1.1rem;
-        }
-        
-        .hamburger-line {
-            height: 2px;
-        }
     }
     
     @media screen and (max-width: 360px) {
@@ -369,14 +251,6 @@
             padding: 0.3rem 0.6rem;
             font-size: 14px;
         }
-        
-        .mobile-menu-items a {
-            padding: 0.7rem 0;
-            font-size: 1rem;
-        }
-        
-        .mobile-menu-social {
-            gap: 1.5rem;
-        }
+    
     }
 </style>
