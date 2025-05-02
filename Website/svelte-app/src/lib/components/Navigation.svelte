@@ -133,6 +133,7 @@
     }
     
     a:hover {
+        text-decoration: none;
         transform: translateY(-3px);
         color: var(--secondary-color);
     }

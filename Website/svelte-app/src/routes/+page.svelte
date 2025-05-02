@@ -1,7 +1,7 @@
 <script>
 import { reveal } from 'svelte-reveal';
 import { goto } from "$app/navigation";
-
+import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 let revealDelay = 60;
 
 const project1 = {
@@ -37,6 +37,7 @@ const project1 = {
     <div class="hero-text">
         <h1 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*10 }}>elisabeth</h1>
         <h2 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*11 }}>interactive digital art and design </h2>
+        <ThemeToggle />
     </div>
 
     <div class="logo-container">
@@ -99,6 +100,8 @@ const project1 = {
 </h2>
 </div>
 
+
+
 <div class="background">
     <span></span>
     <span></span>
@@ -128,15 +131,12 @@ const project1 = {
         margin: 1rem;
     }
 
-    #cv-download {
+    #cv-download a{
         transition: transform 0.3s ease, color 0.3s ease;
     }
 
     #cv-download a:hover {
         text-decoration: none;
-    }
-
-    #cv-download:hover {
         transform: translateY(-3px);
         color: var(--secondary-color);
     }
@@ -305,7 +305,7 @@ const project1 = {
     height: 100vh;
     top: 0;
     left: 0;
-    background: #cfcfcf;
+    background: var(--background-color);
     overflow: hidden;
     z-index: -1;
 }
@@ -324,7 +324,7 @@ const project1 = {
 
 
 .background span:nth-child(0) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 94%;
     left: 62%;
     animation-duration: 22s;
@@ -333,7 +333,7 @@ const project1 = {
     box-shadow: 100vmin 0 12.854635182458411vmin currentColor;
 }
 .background span:nth-child(1) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 83%;
     left: 22%;
     animation-duration: 36s;
@@ -342,7 +342,7 @@ const project1 = {
     box-shadow: -100vmin 0 13.36585824247817vmin currentColor;
 }
 .background span:nth-child(2) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 74%;
     left: 18%;
     animation-duration: 10s;
@@ -351,7 +351,7 @@ const project1 = {
     box-shadow: 100vmin 0 13.03396788093905vmin currentColor;
 }
 .background span:nth-child(3) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 55%;
     left: 79%;
     animation-duration: 26s;
@@ -360,7 +360,7 @@ const project1 = {
     box-shadow: -100vmin 0 12.945415346585264vmin currentColor;
 }
 .background span:nth-child(4) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 62%;
     left: 66%;
     animation-duration: 45s;
@@ -369,7 +369,7 @@ const project1 = {
     box-shadow: -100vmin 0 12.739353426182024vmin currentColor;
 }
 .background span:nth-child(5) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 55%;
     left: 36%;
     animation-duration: 6s;
@@ -378,7 +378,7 @@ const project1 = {
     box-shadow: -100vmin 0 12.760383004883787vmin currentColor;
 }
 .background span:nth-child(6) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 77%;
     left: 2%;
     animation-duration: 19s;
@@ -387,7 +387,7 @@ const project1 = {
     box-shadow: -100vmin 0 12.851952212086125vmin currentColor;
 }
 .background span:nth-child(7) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 92%;
     left: 42%;
     animation-duration: 46s;
@@ -396,7 +396,7 @@ const project1 = {
     box-shadow: -100vmin 0 13.21066056938132vmin currentColor;
 }
 .background span:nth-child(8) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 37%;
     left: 36%;
     animation-duration: 10s;
@@ -405,7 +405,7 @@ const project1 = {
     box-shadow: -100vmin 0 13.380017884256299vmin currentColor;
 }
 .background span:nth-child(9) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 64%;
     left: 88%;
     animation-duration: 43s;
@@ -414,7 +414,7 @@ const project1 = {
     box-shadow: -100vmin 0 13.254028955934459vmin currentColor;
 }
 .background span:nth-child(10) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 84%;
     left: 6%;
     animation-duration: 26s;
@@ -423,7 +423,7 @@ const project1 = {
     box-shadow: -100vmin 0 13.150690606333166vmin currentColor;
 }
 .background span:nth-child(11) {
-    color: #ededed;
+    color: var(--effect-color);
     top: 36%;
     left: 82%;
     animation-duration: 17s;

@@ -2,6 +2,13 @@
 <script>
     // Import components
     import {Navigation, MouseTrail, Footer} from "$lib";
+    import { onMount } from 'svelte';
+    import { initTheme } from '$lib/stores/theme';
+    
+    onMount(() => {
+        // Initialize theme on client-side
+        initTheme();
+    });
 </script>
 
 <!-- Header -->

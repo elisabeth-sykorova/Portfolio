@@ -2,14 +2,19 @@
 
 
 :root {
+    /* Light theme (default) */
     --primary-color: #0F0F0F; /*#38265b;*/
-    --secondary-color: hsl(0, 0%, 33%); /*#b94a20;*/ 
+    --secondary-color: hsl(0, 0%, 35%); /*#b94a20;*/ 
+    --effect-color: #e2e2e2;
     --secondary-opacity: hsla(118, 53%, 74%, 0.712);
-    --background-color: #d4d4d4;/*#261d18;*/
+    --background-color: #cccccc;/*#261d18;*/
     --background-color-half: #d4d4d47a;
     --text-color: #202020; 
     --font-family: 'Hubot Sans', sans-serif;
     --base-font-size: 18px;
+    
+    /* Shared properties for both themes */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     
     /* Pattern variables */
     --pattern-color-1: rgba(0, 0, 0, 0.05); /* Subtle dark color for patterns */
@@ -26,6 +31,24 @@
 
     --separator: 1.5px solid var(--text-color);
 }
+
+/* Dark theme */
+[data-theme="dark"] {
+    --primary-color: #FFFFFF;
+    --secondary-color: #b1b1b1;
+    --effect-color: #111111;
+    --secondary-opacity: hsla(118, 53%, 15%, 0.712);
+    --background-color: #121212;
+    --background-color-half: #1212127a;
+    --text-color: #EFEFEF;
+    --font-family: "Cutive Mono", monospace;
+    
+    /* Pattern variables for dark theme */
+    --pattern-color-1: rgba(255, 255, 255, 0.05);
+    --pattern-color-2: rgba(0, 0, 0, 0.1);
+    --pattern-color-3: rgba(255, 255, 255, 0.03);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -37,9 +60,7 @@ body{
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.5;
-    background-color: #cfcfcf;
-    }
-
+}
 /* Pattern Classes - Add one of these classes to the body element to apply a pattern */
 
 /* 1. Dot Pattern */
@@ -87,4 +108,42 @@ a:hover{
     max-width: var(--max-width);
     margin: 0 auto;
     padding: var(--spacing-medium);
+}
+
+/* Fix for background span elements */
+.background span:nth-child(0) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(1) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(2) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(3) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(4) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(5) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(6) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(7) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(8) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(9) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(10) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(11) {
+    color: var(--secondary-color);
 }
