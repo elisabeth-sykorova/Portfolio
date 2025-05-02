@@ -81,7 +81,7 @@
         border-left: 1px solid var(--text-color-soft, #44434b);
         padding: 1rem;
         font-size: 0.9rem;
-        transform: translateX(190%);
+        transform: translateX(150%);
     }
     
     .toc-title {

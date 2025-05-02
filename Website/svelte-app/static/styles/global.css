@@ -1,5 +1,8 @@
 /*GLOBAL CSS STYLES WITH VARIABLES*/
-
+@font-face {
+    font-family: BuzzFont;
+    src: url(/static/BuzzzFont.ttf);
+}
 
 :root {
     /* Light theme (default) */
@@ -11,6 +14,7 @@
     --background-color-half: #d4d4d47a;
     --text-color: #202020; 
     --font-family: 'Hubot Sans', sans-serif;
+    --buzz-font: BuzzFont;
     --base-font-size: 18px;
     
     /* Shared properties for both themes */
@@ -53,6 +57,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: var(--font-family);
     font-size: var(--base-font-size);

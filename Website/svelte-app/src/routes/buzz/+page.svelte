@@ -1,9 +1,15 @@
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+<script>
     import { onMount } from 'svelte';
     import { slide } from 'svelte/transition';
     import TableOfContents from '$lib/components/TableOfContents.svelte';
+    import ImageGallery from '$lib/components/ImageGallery.svelte';
 
-
+    // Array of gameplay images for skybox gallery
+    const skyboxImages = [
+        '/images/buzz/gameplay1.png',
+        '/images/buzz/gameplay2.png',
+        '/images/buzz/gameplay3.png'
+    ];
     
     // Define sections for table of contents
     const tocSections = [
@@ -16,7 +22,6 @@
         { id: 'texturing-mushrooms', title: 'Mushrooms', level: 3 },
         { id: 'texturing-skybox', title: 'Skybox & Color Correction', level: 3 },
         { id: 'ui', title: 'Font & UI elements', level: 2 },
-        { id: 'process', title: 'The Creation Process', level: 2 },
         { id: 'end', title: 'Trailer & Links', level: 2 }
     ];
     
@@ -36,7 +41,7 @@
 <div class="page-layout">
     <div id="content">
         <h1 id="title">
-            BUZZ VS THE HARVESTERS
+            Buzzz Vs<br>The Harvesters
         </h1>
 
         <div id="intro">
@@ -57,16 +62,25 @@
             <h2>Animation</h2>
             <div id="animation-buzz">
                 <h3>Buzzz</h3>
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xn725u_cIbU?si=2g_Pr2OijrEapBFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xn725u_cIbU?si=2g_Pr2OijrEapBFM&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
             <div id="animation-enemies">
                 <h3>Swarmer</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/J3aXm9T3Aoc?si=6zDaCH6uiFXOe76f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/J3aXm9T3Aoc?si=6zDaCH6uiFXOe76f&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
                 <h3>Feeder</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/COWe8CeCq8Y?si=7lJBaqGorHTUk4Fd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/COWe8CeCq8Y?si=7lJBaqGorHTUk4Fd&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
             <div id="animation-environment">
                 <h3>Environment</h3>
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1080904020?h=04a9a09045&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Environment Animations; BUZZZ VS THE HARVESTERS; Games Fleadh 2025"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
             </div>
         </div>
 
@@ -74,24 +88,27 @@
             <h2>Texturing</h2>
             <div id="texturing-mushrooms">
                 <h3>Mushrooms</h3>
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1080904020?h=04a9a09045&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Environment Animations; BUZZZ VS THE HARVESTERS; Games Fleadh 2025"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
             </div>
             <div id="texturing-skybox">
                 <h3>Skybox & Overall Color Correction</h3>
+                <div class="gallery-card">
+                    <ImageGallery images={skyboxImages} />
+                </div>
             </div>
         </div>
 
         <div id="ui">
             <h2>Font & UI elements</h2>
         </div>
-        
-        <div id="process">
-            <h2>The Creation Process</h2>
-        </div>
 
         <div id="end">
             <h2>Trailer & Links</h2>
-            <iframe src="https://setuo365-my.sharepoint.com/personal/c00301316_setu_ie/_layouts/15/embed.aspx?UniqueId=e1d77e12-393f-475a-9613-dcec36ac8e35&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="BuzzzVsTheHarvestersTrailer.mp4"></iframe>
-
+            <div class="video-container">
+                <iframe src="https://setuo365-my.sharepoint.com/personal/c00301316_setu_ie/_layouts/15/embed.aspx?UniqueId=e1d77e12-393f-475a-9613-dcec36ac8e35&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="BuzzzVsTheHarvestersTrailer.mp4"></iframe>
+            </div>
             <br>
             <a href="https://reverend-speed.itch.io/buzzz-vs-the-harvesters">Link to our itch.io page</a>
         </div>
@@ -127,6 +144,31 @@
 
 
 <style>
+
+    #title{
+        white-space: nowrap;
+    }
+    /* Responsive video container */
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 2rem 0;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        pointer-events: none; /* Prevents interaction with video UI */
+    }
 
     h1 {
         margin-top: 10%;
@@ -211,7 +253,7 @@
     backface-visibility: hidden;
     position: absolute;
     animation: move;
-    animation-duration: 45;
+    animation-duration: 45s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
