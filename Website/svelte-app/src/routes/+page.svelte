@@ -35,8 +35,8 @@ const project1 = {
 <div id="hero" style="position: relative; z-index: 1;">
     <!-- <img src="/images/oliva.jpg" alt="hero"> -->
     <div class="hero-text">
-        <h1 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*10 }}>elisabeth</h1>
-        <h2 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*11 }}>interactive digital art and design </h2>
+        <h1 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*10 }}>Elis(abeth)</h1>
+        <h2 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*11 }}>Interactive Digital Art and Design </h2>
         <ThemeToggle />
     </div>
 
@@ -47,13 +47,13 @@ const project1 = {
 
 <div id="intro" use:reveal={{ preset: "fly"}}>
 <p>
-    Student of Interactive Digital Art and Design
+    Student of Interactive Digital Art and Design, based in Czech Republic and Ireland.
 </p>
 </div>
 
 
 <div class="project-list" >
-<h2 id="work" use:reveal={{ preset: "fly"}}>projects</h2>
+<h2 id="work" use:reveal={{ preset: "fly"}}>Projects</h2>
 <div id="category-buttons" use:reveal={{ preset: "fly", delay: revealDelay*1}}>
     <button on:click={() => chosenCategory = "all"} class:selected={chosenCategory === "all"}> all</button>
     <button on:click={() => chosenCategory = "games"} class:selected={chosenCategory === "games"}> games</button>
@@ -67,15 +67,15 @@ const project1 = {
 {#each project.category as category}
   {#if category === chosenCategory}
 
-  <div id="entire-project" use:reveal={{ preset: "fly"}} style="position: relative; z-index: 1;">
+  <div id="entire-project" style="position: relative; z-index: 1;">
     <div id="projects">
         <a href="/{project.page}">
         <img src="/images/{project.img}" alt="project">
         </a>
     <div class="project-info">
-        <a href="/{project.page}" class="project-title" use:reveal={{ preset: "fly", delay: revealDelay*2}}>{project.name}</a>
-        <div class="project-description" use:reveal={{ preset: "fly", delay: revealDelay*3}}>{project.description}</div>
-        <div id="roles" use:reveal={{ preset: "fly", delay: revealDelay*3}}>
+        <a href="/{project.page}" class="project-title">{project.name}</a>
+        <div class="project-description">{project.description}</div>
+        <div id="roles" >
             <p>roles:</p>
             {#each project.roles as role}
             <span>{role}</span>
@@ -92,7 +92,7 @@ const project1 = {
 {/each}
 
 
-<div id="cv-download">
+<div id="cv-download" use:reveal={{ preset: "fly"}}>
 <h2 id="cv">
 <a href="/CV_Elisabeth_Sýkorová.pdf" target="_blank" >cv<img src="/images/download.png" alt="download button icon" id="download-icon"></a>
 </h2>

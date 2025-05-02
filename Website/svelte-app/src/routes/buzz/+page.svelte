@@ -65,29 +65,29 @@
         </div>
 
         <div id="animation" >
-            <h2 use:reveal={{ preset: "fly"}}>Animation</h2>
-            <p use:reveal={{ preset: "fly", delay: revealDelay}}>Animated assets include the player character - Buzzz, the bumblebee, two types of enemies - Swarmer and Feeder, the harvesters, and the animated environmental assets - Mushrooms and grass.</p>
-            <div id="animation-buzz" use:reveal={{ preset: "fly"}}>
+            <h2>Animation</h2>
+            <p>Animated assets include the player character - Buzzz, the bumblebee, two types of enemies - Swarmer and Feeder, the harvesters, and the animated environmental assets - Mushrooms and grass.</p>
+            <div id="animation-buzz">
                 <h3>Buzzz</h3>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xn725u_cIbU?si=2g_Pr2OijrEapBFM&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             <div id="animation-enemies" >
-                <div use:reveal={{ preset: "fly"}}>
+                <div>
                 <h3>Swarmer</h3>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/J3aXm9T3Aoc?si=6zDaCH6uiFXOe76f&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 </div>
-                <div use:reveal={{ preset: "fly"}}>
+                <div>
                 <h3>Feeder</h3>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/COWe8CeCq8Y?si=7lJBaqGorHTUk4Fd&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 </div>
             </div>
-            <div id="animation-environment" use:reveal={{ preset: "fly"}}> 
+            <div id="animation-environment" > 
                 <h3>Environment</h3>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/HpQ3h0PE6_Y?si=expNpX2rP8R-EVdZ&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -97,14 +97,14 @@
         </div>
 
         <div id="texturing">
-            <h2 use:reveal={{ preset: "fly"}}>Texturing</h2>
-            <div id="texturing-mushrooms" use:reveal={{ preset: "fly"}}>
+            <h2 >Texturing</h2>
+            <div id="texturing-mushrooms">
                 <h3>Mushrooms</h3>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/HpQ3h0PE6_Y?si=expNpX2rP8R-EVdZ&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-            <div id="texturing-skybox" use:reveal={{ preset: "fly"}}>
+            <div id="texturing-skybox">
                 <h3>Skybox & Overall Color Correction</h3>
                 <div class="gallery-card">
                     <ImageGallery images={skyboxImages} />
@@ -113,12 +113,12 @@
         </div>
 
         <div id="ui">
-            <h2 use:reveal={{ preset: "fly"}}>Font & UI elements</h2>
-            <img src="/images/buzz/font.png" alt="font showcase" use:reveal={{ preset: "fly"}}>
-            <img src="/images/buzz/ui_elements.png" alt="ui elements" use:reveal={{ preset: "fly"}}>
+            <h2>Font & UI elements</h2>
+            <img src="/images/buzz/font.png" alt="font showcase" >
+            <img src="/images/buzz/ui_elements.png" alt="ui elements" >
         </div>
 
-        <div id="end" use:reveal={{ preset: "fly"}}>
+        <div id="end">
             <h2>Relevant Links</h2>
             <a href="https://reverend-speed.itch.io/buzzz-vs-the-harvesters" target="_blank">Our itch.io page</a>
             <br>

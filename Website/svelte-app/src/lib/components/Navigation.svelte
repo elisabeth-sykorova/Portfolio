@@ -49,7 +49,7 @@
 <nav class="glass-nav">
     <div class="nav-container">
         <div class="nav-left">
-            <a href="/" use:reveal={{ preset: "slide", delay: revealDelay }}>elisabeth <img src="/images/logo_prototype.png" alt="logo"></a>
+            <a href="/" use:reveal={{ preset: "slide", delay: revealDelay }}>Elis(abeth) <img src="/images/logo_prototype.png" alt="logo"></a>
         </div>
             <div class="nav-center">
                 <a href="/#work" use:reveal={{ preset: "slide", delay: revealDelay*2 }}>work</a>
@@ -133,7 +133,7 @@
     .nav-left {
         flex: 0 0 auto;
         text-align: left;
-        padding-left: var(--bigger-space);
+        padding-left: var(--smaller-space);
     }
     
     .nav-center {
@@ -151,7 +151,7 @@
         display: flex;
         gap: 1rem;
         align-items: center;
-        padding-right: var(--bigger-space);
+        padding-right: var(--smaller-space);
     }
 
     

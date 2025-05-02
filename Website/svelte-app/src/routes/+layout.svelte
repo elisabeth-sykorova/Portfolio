@@ -36,16 +36,4 @@
         z-index: 100;
     }
 
-    
-    footer {
-        color: var(--text-color);
-        text-align: center;
-        font-size: var(--small-text);
-        padding: var(--small-space);
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        border-top: var(--separator);
-    }
-
 </style>

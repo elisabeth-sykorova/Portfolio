@@ -20,7 +20,7 @@
 
 <footer>
     <div class="footer-container">
-        <div class="nav-right" use:reveal={{ preset: "slide"}}>
+        <div class="nav-right">
             <p>Elisabeth Sykorova</p>
             <p>|</p>
             <div class="email-container">
