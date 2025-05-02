@@ -46,11 +46,11 @@
         <h1 id="title" use:reveal={{ preset: "fly"}}>
             Buzzz Vs<br>The Harvesters
         </h1>
-        <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>roles: art direction, animation, texturing, font & ui creation, trailer</p>
+        <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>Roles: art direction, animation, texturing, font & ui creation, trailer</p>
         <div class="playable" use:reveal={{ preset: "fly", delay: revealDelay}} >
             <iframe width="560" height="315" src="https://www.youtube.com/embed/26qRWZ_Tfs4?si=_KqXCan8g1bjoNjx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div id="intro" use:reveal={{ preset: "fly"}}>
+        <div id="intro">
             <h2>Description</h2>
             <p>
                 Buzzz Vs The Harvesters is a ps1-style endless runner game, similar to games such as Starfox or Panzer Dragoon.
@@ -157,7 +157,13 @@
 
 <style>
 
+    #end {
+        margin-bottom: 20%;
+    }
 
+    #roles {
+        font-style: italic;
+    }
     .playable {
         position: relative;
         padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -207,7 +213,6 @@
         width: 100%;
         height: 100%;
         border-radius: 8px;
-        pointer-events: none; /* Prevents interaction with video UI */
     }
 
     h1 {
@@ -264,6 +269,13 @@
             bottom: 1rem;
             right: 1rem;
             z-index: 1000;
+        }
+
+        #title {
+            font-size: 3rem;
+        }
+        div {
+            margin-top: 20%;
         }
     }
     
