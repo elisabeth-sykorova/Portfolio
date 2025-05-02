@@ -56,9 +56,9 @@ const project1 = {
 <div class="project-list" >
 <h2 id="work" use:reveal={{ preset: "fly"}}>projects</h2>
 <div id="category-buttons" use:reveal={{ preset: "fly", delay: revealDelay*1}}>
-    <button on:click={() => chosenCategory = "all"}> all</button>
-    <button on:click={() => chosenCategory = "games"}> games</button>
-    <button on:click={() => chosenCategory = "ui"}> ui</button>
+    <button on:click={() => chosenCategory = "all"} class:selected={chosenCategory === "all"}> all</button>
+    <button on:click={() => chosenCategory = "games"} class:selected={chosenCategory === "games"}> games</button>
+    <button on:click={() => chosenCategory = "ui"} class:selected={chosenCategory === "ui"}> ui</button>
 </div>
 
 </div>
@@ -238,6 +238,12 @@ const project1 = {
         color: var(--text-color);
 
         transition: font-size 0.6s ease, color 0.6s ease, background-color 0.6s ease;
+    }
+
+    button.selected {
+        color: var(--background-color);
+        background-color: var(--text-color);
+        font-size: 1.5rem;
     }
 
     button:hover, button:focus{

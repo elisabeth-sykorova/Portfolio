@@ -1,8 +1,7 @@
 
 <script>
     // Import components
-    import {Navigation} from "$lib";
-    import {MouseTrail} from "$lib";
+    import {Navigation, MouseTrail, Footer} from "$lib";
 </script>
 
 <!-- Header -->
@@ -16,9 +15,7 @@
 </main>
 
 <!-- Footer -->
-<!-- <footer>
-    <p>&copy; 2025 Portfolio. All rights reserved.</p>
-</footer> -->
+<Footer />
 
 
 <style>
