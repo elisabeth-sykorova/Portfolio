@@ -52,7 +52,6 @@
 
 <div class="toc-container">
     <div class="toc-content">
-        <h2 class="toc-title">Contents</h2>
         <nav class="toc-nav">
             <ul>
                 {#each sections as { id, title, level }}

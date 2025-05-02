@@ -16,7 +16,7 @@
     
     // Define sections for table of contents
     const tocSections = [
-        { id: 'intro', title: 'Introduction', level: 2 },
+        { id: 'intro', title: 'Description', level: 2 },
         { id: 'animation', title: 'Animation', level: 2 },
         { id: 'animation-buzz', title: 'Buzzz', level: 3 },
         { id: 'animation-enemies', title: 'Enemies', level: 3 },
@@ -25,7 +25,7 @@
         { id: 'texturing-mushrooms', title: 'Mushrooms', level: 3 },
         { id: 'texturing-skybox', title: 'Skybox & Color Correction', level: 3 },
         { id: 'ui', title: 'Font & UI elements', level: 2 },
-        { id: 'end', title: 'Trailer & Links', level: 2 }
+        { id: 'end', title: 'Relevant Links', level: 2 }
     ];
     
     let isMobile = false;
@@ -46,10 +46,12 @@
         <h1 id="title" use:reveal={{ preset: "fly"}}>
             Buzzz Vs<br>The Harvesters
         </h1>
-        <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>roles: art direction, animation, texturing, font&ui creation, trailer</p>
-        <img src="/images/buzz/hero.png" alt="view of game" use:reveal={{ preset: "fly", delay: revealDelay*2}}>
+        <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>roles: art direction, animation, texturing, font & ui creation, trailer</p>
+        <div class="playable" use:reveal={{ preset: "fly", delay: revealDelay}} >
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/26qRWZ_Tfs4?si=_KqXCan8g1bjoNjx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         <div id="intro" use:reveal={{ preset: "fly"}}>
-            <h2>Introduction</h2>
+            <h2>Description</h2>
             <p>
                 Buzzz Vs The Harvesters is a ps1-style endless runner game, similar to games such as Starfox or Panzer Dragoon.
                 <br>
@@ -117,12 +119,10 @@
         </div>
 
         <div id="end" use:reveal={{ preset: "fly"}}>
-            <h2>Trailer & Links</h2>
-            <div class="playable">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/26qRWZ_Tfs4?si=_KqXCan8g1bjoNjx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+            <h2>Relevant Links</h2>
+            <a href="https://reverend-speed.itch.io/buzzz-vs-the-harvesters" target="_blank">Our itch.io page</a>
             <br>
-            <a href="https://reverend-speed.itch.io/buzzz-vs-the-harvesters" target="_blank">Link to our itch.io page</a>
+            <a href="https://www.setu.ie/news/setu-celebrates-success-at-games-fleadh-2025" target="_blank">Article about Games Fleadh 2025</a>
         </div>
     </div>
     
@@ -159,8 +159,23 @@
 
 
     .playable {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 2rem 0;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .playable iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        border-radius: 10px;
+        height: 100%;
+        border-radius: 8px;
     }
     h1, h2, h3 {
         margin-bottom: 1rem;
