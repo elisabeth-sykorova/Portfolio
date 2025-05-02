@@ -142,6 +142,7 @@
         justify-content: center;
         gap: 2rem;
         margin-right: 0;
+        transform: translateX(-20%);
     }
     
     .nav-right {

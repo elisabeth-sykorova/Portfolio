@@ -1,8 +1,11 @@
 <script>
     import { onMount } from 'svelte';
+    import { reveal } from 'svelte-reveal';
     import { slide } from 'svelte/transition';
     import TableOfContents from '$lib/components/TableOfContents.svelte';
     import ImageGallery from '$lib/components/ImageGallery.svelte';
+
+    let revealDelay = 60;
 
     // Array of gameplay images for skybox gallery
     const skyboxImages = [
@@ -40,59 +43,66 @@
 
 <div class="page-layout">
     <div id="content">
-        <h1 id="title">
+        <h1 id="title" use:reveal={{ preset: "fly"}}>
             Buzzz Vs<br>The Harvesters
         </h1>
-
-        <div id="intro">
+        <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>roles: art direction, animation, texturing, font&ui creation, trailer</p>
+        <img src="/images/buzz/hero.png" alt="view of game" use:reveal={{ preset: "fly", delay: revealDelay*2}}>
+        <div id="intro" use:reveal={{ preset: "fly"}}>
             <h2>Introduction</h2>
             <p>
-                A game created for the Games Fleadh 2025 Competition.
+                Buzzz Vs The Harvesters is a ps1-style endless runner game, similar to games such as Starfox or Panzer Dragoon.
+                <br>
+                Buzzz is a wholesome bumblebee living in a magical forest. One day, mechanical creatures, the Harvesters, invade the forest and start stealing its natural resources by feeding on the plants. It is up to Buzzz now to save the forest.
+                <br>
+                <br>
+                This game was created for the student competition Games Fleadh 2025 and won "Best in Original Art Assets" award there.
+                <br>
+                I got to work on this project with David Hajek - 3D models artist, Pavel Dobias - 2D artist + level designer, Lucy Arthur and Robert McGregor - developers. My thanks goes to all of them.
             </p>
-            <p>
-                Won an award for Best Original in Game Assets
-            </p>
-            <p>
-                roles: art direction, animation, texturing, font & ui
-            </p>
-            <p> teammates: David Hajek, Pavel Dobias, Lucy Arthur, Robert McGregor</p>
         </div>
 
-        <div id="animation">
-            <h2>Animation</h2>
-            <div id="animation-buzz">
+        <div id="animation" >
+            <h2 use:reveal={{ preset: "fly"}}>Animation</h2>
+            <p use:reveal={{ preset: "fly", delay: revealDelay}}>Animated assets include the player character - Buzzz, the bumblebee, two types of enemies - Swarmer and Feeder, the harvesters, and the animated environmental assets - Mushrooms and grass.</p>
+            <div id="animation-buzz" use:reveal={{ preset: "fly"}}>
                 <h3>Buzzz</h3>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xn725u_cIbU?si=2g_Pr2OijrEapBFM&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-            <div id="animation-enemies">
+            <div id="animation-enemies" >
+                <div use:reveal={{ preset: "fly"}}>
                 <h3>Swarmer</h3>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/J3aXm9T3Aoc?si=6zDaCH6uiFXOe76f&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
+                </div>
+                <div use:reveal={{ preset: "fly"}}>
                 <h3>Feeder</h3>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/COWe8CeCq8Y?si=7lJBaqGorHTUk4Fd&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
+                </div>
             </div>
-            <div id="animation-environment">
+            <div id="animation-environment" use:reveal={{ preset: "fly"}}> 
                 <h3>Environment</h3>
                 <div class="video-container">
-                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1080904020?h=04a9a09045&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Environment Animations; BUZZZ VS THE HARVESTERS; Games Fleadh 2025"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HpQ3h0PE6_Y?si=expNpX2rP8R-EVdZ&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
                 </div>
             </div>
         </div>
 
         <div id="texturing">
-            <h2>Texturing</h2>
-            <div id="texturing-mushrooms">
+            <h2 use:reveal={{ preset: "fly"}}>Texturing</h2>
+            <div id="texturing-mushrooms" use:reveal={{ preset: "fly"}}>
                 <h3>Mushrooms</h3>
                 <div class="video-container">
-                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1080904020?h=04a9a09045&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Environment Animations; BUZZZ VS THE HARVESTERS; Games Fleadh 2025"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HpQ3h0PE6_Y?si=expNpX2rP8R-EVdZ&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-            <div id="texturing-skybox">
+            <div id="texturing-skybox" use:reveal={{ preset: "fly"}}>
                 <h3>Skybox & Overall Color Correction</h3>
                 <div class="gallery-card">
                     <ImageGallery images={skyboxImages} />
@@ -101,16 +111,18 @@
         </div>
 
         <div id="ui">
-            <h2>Font & UI elements</h2>
+            <h2 use:reveal={{ preset: "fly"}}>Font & UI elements</h2>
+            <img src="/images/buzz/font.png" alt="font showcase" use:reveal={{ preset: "fly"}}>
+            <img src="/images/buzz/ui_elements.png" alt="ui elements" use:reveal={{ preset: "fly"}}>
         </div>
 
-        <div id="end">
+        <div id="end" use:reveal={{ preset: "fly"}}>
             <h2>Trailer & Links</h2>
-            <div class="video-container">
-                <iframe src="https://setuo365-my.sharepoint.com/personal/c00301316_setu_ie/_layouts/15/embed.aspx?UniqueId=e1d77e12-393f-475a-9613-dcec36ac8e35&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="BuzzzVsTheHarvestersTrailer.mp4"></iframe>
+            <div class="playable">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/26qRWZ_Tfs4?si=_KqXCan8g1bjoNjx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <br>
-            <a href="https://reverend-speed.itch.io/buzzz-vs-the-harvesters">Link to our itch.io page</a>
+            <a href="https://reverend-speed.itch.io/buzzz-vs-the-harvesters" target="_blank">Link to our itch.io page</a>
         </div>
     </div>
     
@@ -145,6 +157,19 @@
 
 <style>
 
+
+    .playable {
+        width: 100%;
+        border-radius: 10px;
+    }
+    h1, h2, h3 {
+        margin-bottom: 1rem;
+    }
+    img{
+        margin-top: 5rem;
+        border-radius: 10px;
+        max-width: 100%;
+    }
     #title{
         white-space: nowrap;
     }

@@ -9,7 +9,7 @@ const project1 = {
    img: "buzzz.png",
    category: ["all", "games"],
    roles: ["art direction", "animation", "UI", "textures"],
-   description:"descr",
+   description:"Buzzz Vs The Harvesters is a ps1-style endless runner game, similar to games such as Starfox or Panzer Dragoon.\nThis game was created for the student competition Games Fleadh 2025 and won Best in Original Art Assets award there. ",
    page: "buzz"
    
  };
@@ -47,9 +47,7 @@ const project1 = {
 
 <div id="intro" use:reveal={{ preset: "fly"}}>
 <p>
-    maybe something about what i do in short yes yes yes
-    <br>
-    button to about me
+    Student of Interactive Digital Art and Design
 </p>
 </div>
 
@@ -77,15 +75,15 @@ const project1 = {
     <div class="project-info">
         <a href="/{project.page}" class="project-title" use:reveal={{ preset: "fly", delay: revealDelay*2}}>{project.name}</a>
         <div class="project-description" use:reveal={{ preset: "fly", delay: revealDelay*3}}>{project.description}</div>
+        <div id="roles" use:reveal={{ preset: "fly", delay: revealDelay*3}}>
+            <p>roles:</p>
+            {#each project.roles as role}
+            <span>{role}</span>
+            {/each}
+        </div>
     </div>
 
 
-    </div>
-    <div id="roles" use:reveal={{ preset: "fly", delay: revealDelay*3}}>
-        <p>roles:</p>
-        {#each project.roles as role}
-        <span>{role}</span>
-        {/each}
     </div>
 
 </div>
@@ -168,16 +166,16 @@ const project1 = {
     }
 
     .project-description{
-        display: block;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-
+        justify-content: space-between;
+        margin-right: 40%;
+        width: 50%;
     }
     #roles{
-        margin-left: 21%;
-        display: inline-flex;
+        display:flex;
         gap: 1rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-bottom: 5rem;
     }
 
@@ -291,7 +289,6 @@ const project1 = {
         font-size: 2.25rem;
         margin-bottom: 1rem;
     }
-    /* Animation is now handled by svelte-reveal */
 
     @keyframes move {
     100% {
