@@ -66,10 +66,10 @@
         <div id="software-used">
             <h3>Tools Used:</h3>
             <ul>
-                <li><img src='/images/blender.png'>Blender</li>
-                <li><img src='/images/ps.png'>Adobe Photoshop</li>
-                <li><img src='/images/davinci.png'>DaVinci Resolve</li>
-                <li><img src='/images/ink.png'>Inkscape</li>
+                <li><img src='/images/blender.png' alt='blender logo'>Blender</li>
+                <li><img src='/images/ps.png' alt='adobe photoshop logo'>Adobe Photoshop</li>
+                <li><img src='/images/davinci.png' alt='davinci resolve logo'>DaVinci Resolve</li>
+                <li><img src='/images/ink.png' alt='inkscape logo'>Inkscape</li>
             </ul>
         </div>
 

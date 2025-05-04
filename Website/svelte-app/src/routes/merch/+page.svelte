@@ -6,22 +6,19 @@
     import ImageGallery from '$lib/components/ImageGallery.svelte';
 
     let revealDelay = 60;
-
-    // Array of gameplay images for skybox gallery
+    
     // Define sections for table of contents
     const tocSections = [
         { id: 'intro', title: 'Introduction', level: 2 },
-        { id: 'one', title: 'Logo Variations', level: 2 },
-        { id: 'two', title: 'Color Palette', level: 2 },
-        { id: 'three', title: 'Font Choice', level: 2 },
-        { id: 'four', title: 'Product Mockups', level: 2 },
-        { id: 'end', title: 'Relevant Links', level: 2 }
+        { id: 'moodboard', title: 'Moodboard', level: 2 },
+        { id: 'website', title: 'Live Website', level: 2 },
+        { id: 'github', title: 'Github Repository', level: 2 },
     ];
     
     let isMobile = false;
     
     onMount(() => {
-        console.log("KS page loaded");
+        console.log("Gregor page loaded");
         isMobile = window.innerWidth <= 768;
         window.addEventListener('resize', () => {
             isMobile = window.innerWidth <= 768;
@@ -34,90 +31,38 @@
 <div class="page-layout">
     <div id="content">
         <h1 id="title" use:reveal={{ preset: "fly"}}>
-            KronoShield Visual Identity
+            Merchandise Website
         </h1>
-        <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>Roles: Visual Identity Designer</p>
-        <div use:reveal={{ preset: "fly", delay: revealDelay}} >
-            <img src="/images/ks/KS_horizontal_transparent.png" alt='horizontal logo' class='media'>
-        </div>
+        <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>Roles: Web Design, Web Deveopment</p>
+            <img src='/images/merch.png' class='media' alt='main page screenshot'>
         <div id="intro">
             <h2>Introduction</h2>
             <p>
-                This is a full visual identity created for a start-up cyber-security company KronoShield. It includes variations of logos, color palette, font, and multiple product mockups.
+                Merchandise Website
                 <br>
-                I was asked to create this visual identity after winning KronoShield's student logo competition they held at the end of 2024.
+                Authors: Elisabeth Sykorova, David Hajek, Tymotheuzs Walichnovski
             </p>
         </div>
 
         <div id="software-used">
             <h3>Tools Used:</h3>
             <ul>
-                <li><img src='/images/ink.png' alt ='inkscape logo'>Inkscape</li>
-                <li><img src='/images/penpot.png' alt='penpot logo'>Penpot</li>
+                <li><img src='/images/ps.png' alt='adobe photoshop logo'>Adobe Photoshop</li>
+                <li><img src='/images/svelte.png' alt='svelte logo'> Svelte</li>
+                <li>- Warp AI</li>
             </ul>
         </div>
 
-        <div id="one" >
+        <h2 id='moodboard'>Moodboard</h2>
+        <img src='/images/merch/Merch_Store_Moodboard.png' alt='moodboard' class='media'>
 
-            <h2>Logo Variations</h2>
-
-            <p>
-                The logo variations include the main - vertical - logo in multi-color, single-color, and black & white options, and the multi-color horizontal logo.
-            </p>
-                    <div id='vertical-logos'>
-                        <h3>Multi-color Vertical</h3>
-                        <img src='/images/ks/KS_multicolor_vertical.png' class='media' alt='multicolor vertical logo'>
-                        <br>
-                        <h3>Single-color Vertical</h3>
-                        <img src='/images/ks/vertical_darker.png' class='media' alt='single-color darker vertical logo'>
-                        <img src='/images/ks/vertical_lighter.png' class='media' alt='single-color lighter vertical logo'>
-                        <br>
-                        <h3>Black & White Vertical</h3>
-                        <img src="/images/ks/vertical_black.png" class='media' alt='black vertical logo'>
-                        <img src='/images/ks/vertical_white.png' class='media' alt='white vertical logo'>
-                    </div>
+        <h2 id='website'>Live Website</h2>
+        <a href='https://david-hajek.github.io/Web-UI-Design-Group-Project/' target='_blank'>Merchandise Website</a>
 
 
-                <h3>Horizontal Logo</h3>
-                    <img src='/images/ks/KS_horizontal_transparent.png' class='media' alt='multicolor horizontal logo'>
-                <div>
-        </div>
-        </div>
-
-        <div id="two">
-            <h2>Color Palette</h2>
-            <p>For the color palette I ended up choosing these blue/green shades. These colors come off as professional and trustworthy as well as open and friendly, which aligns well with the companies' goals.</p>
-            <img src='/images/ks/primary.png' alt='primary color palette' class='media'><img src='/images/ks/secondary.png' alt='secondary color palette' class='media'>
-        </div>
-
-        <div id="three">
-            <h2>Font Choice</h2>
-            <p>Upon the customer's request, the chosen font is sans-serif. I ended up choosing the font Urbanist for its simplicity. </p>
-            <img src="/images/ks/font.png" alt="font showcase" class='media'>
-        </div>
-
-        <div id='four'>
-            <h2>Product Mockups</h2>
-            <p>To showcase the usage of the visual identity, I have created a few product mockups that include business card and t-shirt design concepts.</p>
-            <h3>Business Card - Colored</h3>
-            <img src='/images/ks/KS_business_card_mockup_color.png' class='media' alt='colored business card mockup'>
-            <h3>Business Card - Black & White</h3>
-            <img src='/images/ks/KS_business_card_mockup_black_and_white.png' class = 'media' alt='black and white business card mockup'>
-            <h3> T-Shirt - White, Colored Graphics</h3>
-            <img src='/images/ks/KS_tshirt_mockup2.png' class ='media' alt='tshirt design mockup'>
-            <h3> T-Shirt - White, Black Graphics</h3>
-            <img src='/images/ks/KS_tshirt_mockup1.png' class ='media' alt='tshirt design mockup'>
-            <h3> T-Shirt - Black, White Graphics</h3>
-            <img src='/images/ks/KS_tshirt_mockup1_dark.png' class ='media' alt='tshirt design mockup'>
-
-        </div>
-
-
-        <div id="end">
-            <h2>Relevant Links</h2>
-            <a href="https://design.penpot.app/#/view?file-id=cec80257-5021-8137-8005-ec22326aa22d&page-id=cec80257-5021-8137-8005-ec22326aa22e&section=interactions&index=0&share-id=cec80257-5021-8137-8005-efd66dcf8dad" target="_blank">Visual Identity Catalog on Penpot</a>
-
-        </div>
+        <h2 id='github'>GitHub Repository</h2>
+        <a href='https://github.com/David-Hajek/Web-UI-Design-Group-Project' class='gh-link' target="_blank"><img src='/images/github.png' alt='github logo' class='gh'>Project Repository</a>
+    
     </div>
     
     {#if !isMobile}
@@ -151,14 +96,22 @@
 
 <style>
 
-    #vertical-logos img{
-        max-width: 15rem;
-        border-radius: 0;
-        margin-right: 3rem;
-        margin-bottom: 2rem;
-        margin-top: 3rem;
+    .gh-link {
+        display: inline;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
     }
-
+    .gh {
+        height: 2rem;
+        width: auto;
+        margin-right: 1rem;
+        margin-top: 0rem;
+    }
+    iframe {
+        width: 100%;
+        height: 60rem;
+    }
 
     .media {
         transition: transform 0.3s ease;
@@ -181,6 +134,7 @@
     li {
         display: flex;
         align-items: center;
+        overflow: hidden;
     }
 
     #end {
@@ -190,25 +144,61 @@
     #roles {
         font-style: italic;
     }
+    .playable {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 2rem 0;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
 
+    .playable iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
     h1, h2, h3 {
         margin-bottom: 1rem;
     }
 
     p {
-        margin-block-end: 1rem;
+        margin-block-end: 0rem;
     }
 
     img{
+        margin-top: 2rem;
         border-radius: 10px;
         max-width: 100%;
-        margin-top: 2rem;
-
     }
     #title{
         white-space: nowrap;
     }
-
+    /* Responsive video container */
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 2rem 0;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
 
     h1 {
         margin-top: 10%;

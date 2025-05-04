@@ -23,7 +23,34 @@ const project1 = {
    page: "kronoshield"
  };
 
- let projects = [project1, project2];
+ const project3 = {
+   name: "Ignite Pixels",
+   img: "ignite_pixels.png",
+   category: ["all", "games"],
+   roles: ['Game Design', 'Game Development', 'Asset Creation'],
+   description:'First year university project joint between C++ programming and game art featuring colorful pixel art and action gameplay. (page creation in progress)',
+   page: "ignite"
+ };
+
+ const project4 = {
+   name: "Save Gregor",
+   img: "gregor.png",
+   category: ["all", "games"],
+   roles: ['Game Design', 'Game Development', 'Art Direction', 'Font & UI'],
+   description:'First year university project joint between C++ programming and game art featuring colorful pixel art and action gameplay. (page creation in progress)',
+   page: "gregor"
+ };
+
+ const project5 = {
+   name: "Merchandise Website",
+   img: "merch.png",
+   category: ["all", "web"],
+   roles: ['Web Design', 'Web Development'],
+   description:'Web development project, second year at SETU. (page creation in progress)',
+   page: "merch"
+ };
+
+ let projects = [project1, project2, project3, project4, project5];
 
  let chosenCategory = "all";
 
@@ -58,6 +85,7 @@ const project1 = {
     <button on:click={() => chosenCategory = "all"} class:selected={chosenCategory === "all"}> All</button>
     <button on:click={() => chosenCategory = "games"} class:selected={chosenCategory === "games"}> Games</button>
     <button on:click={() => chosenCategory = "gd"} class:selected={chosenCategory === "gd"}> Graphic Design</button>
+    <button on:click={() => chosenCategory = "web"} class:selected={chosenCategory === "web"}> Web</button>
 </div>
 
 </div>
