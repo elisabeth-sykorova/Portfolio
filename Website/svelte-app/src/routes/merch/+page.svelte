@@ -35,7 +35,7 @@
             Merchandise Website
         </h1>
         <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>Roles: Web Design, Web Deveopment</p>
-            <img src='/images/merch.png' class='media' alt='main page screenshot'>
+            <img src='{base}/images/merch.png' class='media' alt='main page screenshot'>
         <div id="intro">
             <h2>Introduction</h2>
             <p>
@@ -48,21 +48,21 @@
         <div id="software-used">
             <h3>Tools Used:</h3>
             <ul>
-                <li><img src='/images/ps.png' alt='adobe photoshop logo'>Adobe Photoshop</li>
-                <li><img src='/images/svelte.png' alt='svelte logo'> Svelte</li>
+                <li><img src='{base}/images/ps.png' alt='adobe photoshop logo'>Adobe Photoshop</li>
+                <li><img src='{base}/images/svelte.png' alt='svelte logo'> Svelte</li>
                 <li>- Warp AI</li>
             </ul>
         </div>
 
         <h2 id='moodboard'>Moodboard</h2>
-        <img src='/images/merch/Merch_Store_Moodboard.png' alt='moodboard' class='media'>
+        <img src='{base}/images/merch/Merch_Store_Moodboard.png' alt='moodboard' class='media'>
 
         <h2 id='website'>Live Website</h2>
-        <a href='https://david-hajek.github.io/Web-UI-Design-Group-Project/' target='_blank'>Merchandise Website</a>
+        <a href='{base}https://david-hajek.github.io/Web-UI-Design-Group-Project/' target='_blank'>Merchandise Website</a>
 
 
         <h2 id='github'>GitHub Repository</h2>
-        <a href='https://github.com/David-Hajek/Web-UI-Design-Group-Project' class='gh-link' target="_blank"><img src='/images/github.png' alt='github logo' class='gh'>Project Repository</a>
+        <a href='{base}https://github.com/David-Hajek/Web-UI-Design-Group-Project' class='gh-link' target="_blank"><img src='{base}/images/github.png' alt='github logo' class='gh'>Project Repository</a>
     
     </div>
     

@@ -2,6 +2,7 @@
 import { reveal } from 'svelte-reveal';
 import { goto } from "$app/navigation";
 import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+import { base } from '$app/paths';
 let revealDelay = 60;
 
 const project1 = {
@@ -68,7 +69,7 @@ const project1 = {
     </div>
 
     <div class="logo-container">
-        <img class="logo" src="/images/logo_prototype.png" alt="logo" use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*12 }}>
+        <img class="logo" src="{base}/images/logo_prototype.png" alt="logo" use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*12 }}>
     </div>
 </div>
 
@@ -97,11 +98,11 @@ const project1 = {
 
   <div id="entire-project" style="position: relative; z-index: 1;">
     <div id="projects">
-        <a href="/{project.page}">
-        <img src="/images/{project.img}" alt="project">
+        <a href="{base}/{project.page}">
+        <img src="{base}/images/{project.img}" alt="project">
         </a>
     <div class="project-info">
-        <a href="/{project.page}" class="project-title">{project.name}</a>
+        <a href="{base}/{project.page}" class="project-title">{project.name}</a>
         <div class="project-description">{project.description}</div>
         <div id="roles" >
             <p>Roles:</p>
@@ -122,7 +123,7 @@ const project1 = {
 
 <div id="cv-download" use:reveal={{ preset: "fly"}}>
 <h2 id="cv">
-<a href="/CV_Elisabeth_Sýkorová.pdf" target="_blank" >cv<img src="/images/download.png" alt="download button icon" id="download-icon"></a>
+<a href="{base}/CV_Elisabeth_Sýkorová.pdf" target="_blank" >cv<img src="{base}/images/download.png" alt="download button icon" id="download-icon"></a>
 </h2>
 </div>
 </div>

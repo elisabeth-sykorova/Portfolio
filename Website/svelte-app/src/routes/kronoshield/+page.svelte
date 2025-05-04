@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { onMount } from 'svelte';
     import { reveal } from 'svelte-reveal';
     import { slide } from 'svelte/transition';
@@ -38,7 +39,7 @@
         </h1>
         <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>Roles: Visual Identity Designer</p>
         <div use:reveal={{ preset: "fly", delay: revealDelay}} >
-            <img src="/images/ks/KS_horizontal_transparent.png" alt='horizontal logo' class='media'>
+            <img src="{base}/images/ks/KS_horizontal_transparent.png" alt='horizontal logo' class='media'>
         </div>
         <div id="intro">
             <h2>Introduction</h2>
@@ -52,8 +53,8 @@
         <div id="software-used">
             <h3>Tools Used:</h3>
             <ul>
-                <li><img src='/images/ink.png' alt ='inkscape logo'>Inkscape</li>
-                <li><img src='/images/penpot.png' alt='penpot logo'>Penpot</li>
+                <li><img src='{base}/images/ink.png' alt ='inkscape logo'>Inkscape</li>
+                <li><img src='{base}/images/penpot.png' alt='penpot logo'>Penpot</li>
             </ul>
         </div>
 
@@ -66,20 +67,20 @@
             </p>
                     <div id='vertical-logos'>
                         <h3>Multi-color Vertical</h3>
-                        <img src='/images/ks/KS_multicolor_vertical.png' class='media' alt='multicolor vertical logo'>
+                        <img src='{base}/images/ks/KS_multicolor_vertical.png' class='media' alt='multicolor vertical logo'>
                         <br>
                         <h3>Single-color Vertical</h3>
-                        <img src='/images/ks/vertical_darker.png' class='media' alt='single-color darker vertical logo'>
-                        <img src='/images/ks/vertical_lighter.png' class='media' alt='single-color lighter vertical logo'>
+                        <img src='{base}/images/ks/vertical_darker.png' class='media' alt='single-color darker vertical logo'>
+                        <img src='{base}/images/ks/vertical_lighter.png' class='media' alt='single-color lighter vertical logo'>
                         <br>
                         <h3>Black & White Vertical</h3>
-                        <img src="/images/ks/vertical_black.png" class='media' alt='black vertical logo'>
-                        <img src='/images/ks/vertical_white.png' class='media' alt='white vertical logo'>
+                        <img src="{base}/images/ks/vertical_black.png" class='media' alt='black vertical logo'>
+                        <img src='{base}/images/ks/vertical_white.png' class='media' alt='white vertical logo'>
                     </div>
 
 
                 <h3>Horizontal Logo</h3>
-                    <img src='/images/ks/KS_horizontal_transparent.png' class='media' alt='multicolor horizontal logo'>
+                    <img src='{base}/images/ks/KS_horizontal_transparent.png' class='media' alt='multicolor horizontal logo'>
                 <div>
         </div>
         </div>
@@ -87,35 +88,35 @@
         <div id="two">
             <h2>Color Palette</h2>
             <p>For the color palette I ended up choosing these blue/green shades. These colors come off as professional and trustworthy as well as open and friendly, which aligns well with the companies' goals.</p>
-            <img src='/images/ks/primary.png' alt='primary color palette' class='media'><img src='/images/ks/secondary.png' alt='secondary color palette' class='media'>
+            <img src='{base}/images/ks/primary.png' alt='primary color palette' class='media'><img src='{base}/images/ks/secondary.png' alt='secondary color palette' class='media'>
         </div>
 
         <div id="three">
             <h2>Font Choice</h2>
             <p>Upon the customer's request, the chosen font is sans-serif. I ended up choosing the font Urbanist for its simplicity. </p>
-            <img src="/images/ks/font.png" alt="font showcase" class='media'>
+            <img src="{base}/images/ks/font.png" alt="font showcase" class='media'>
         </div>
 
         <div id='four'>
             <h2>Product Mockups</h2>
             <p>To showcase the usage of the visual identity, I have created a few product mockups that include business card and t-shirt design concepts.</p>
             <h3>Business Card - Colored</h3>
-            <img src='/images/ks/KS_business_card_mockup_color.png' class='media' alt='colored business card mockup'>
+            <img src='{base}/images/ks/KS_business_card_mockup_color.png' class='media' alt='colored business card mockup'>
             <h3>Business Card - Black & White</h3>
-            <img src='/images/ks/KS_business_card_mockup_black_and_white.png' class = 'media' alt='black and white business card mockup'>
+            <img src='{base}/images/ks/KS_business_card_mockup_black_and_white.png' class = 'media' alt='black and white business card mockup'>
             <h3> T-Shirt - White, Colored Graphics</h3>
-            <img src='/images/ks/KS_tshirt_mockup2.png' class ='media' alt='tshirt design mockup'>
+            <img src='{base}/images/ks/KS_tshirt_mockup2.png' class ='media' alt='tshirt design mockup'>
             <h3> T-Shirt - White, Black Graphics</h3>
-            <img src='/images/ks/KS_tshirt_mockup1.png' class ='media' alt='tshirt design mockup'>
+            <img src='{base}/images/ks/KS_tshirt_mockup1.png' class ='media' alt='tshirt design mockup'>
             <h3> T-Shirt - Black, White Graphics</h3>
-            <img src='/images/ks/KS_tshirt_mockup1_dark.png' class ='media' alt='tshirt design mockup'>
+            <img src='{base}/images/ks/KS_tshirt_mockup1_dark.png' class ='media' alt='tshirt design mockup'>
 
         </div>
 
 
         <div id="end">
             <h2>Relevant Links</h2>
-            <a href="https://design.penpot.app/#/view?file-id=cec80257-5021-8137-8005-ec22326aa22d&page-id=cec80257-5021-8137-8005-ec22326aa22e&section=interactions&index=0&share-id=cec80257-5021-8137-8005-efd66dcf8dad" target="_blank">Visual Identity Catalog on Penpot</a>
+            <a href="{base}https://design.penpot.app/#/view?file-id=cec80257-5021-8137-8005-ec22326aa22d&page-id=cec80257-5021-8137-8005-ec22326aa22e&section=interactions&index=0&share-id=cec80257-5021-8137-8005-efd66dcf8dad" target="_blank">Visual Identity Catalog on Penpot</a>
 
         </div>
     </div>
