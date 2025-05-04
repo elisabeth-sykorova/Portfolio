@@ -33,7 +33,7 @@
 <div class="page-layout">
     <div id="content">
         <h1 id="title" use:reveal={{ preset: "fly"}}>
-            KronoShield Visual Identity
+            KronoShield<br>Visual Identity
         </h1>
         <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>Roles: Visual Identity Designer</p>
         <div use:reveal={{ preset: "fly", delay: revealDelay}} >

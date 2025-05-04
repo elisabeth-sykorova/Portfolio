@@ -30,7 +30,7 @@
 <div class="page-layout">
     <div id="content">
         <h1 id="title" use:reveal={{ preset: "fly"}}>
-            Merchandise Website
+            Merchandise<br>Website
         </h1>
         <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>Roles: Web Design, Web Deveopment</p>
             <img src='{base}/images/merch.png' class='media' alt='main page screenshot'>
