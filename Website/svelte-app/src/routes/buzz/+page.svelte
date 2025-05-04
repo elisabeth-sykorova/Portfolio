@@ -3,7 +3,6 @@
     import { onMount } from 'svelte';
     import { reveal } from 'svelte-reveal';
     import TableOfContents from '$lib/components/TableOfContents.svelte';
-    import ImageGallery from '$lib/components/ImageGallery.svelte';
 
     let revealDelay = 60;
 
@@ -120,7 +119,9 @@
             <div id="texturing-skybox">
                 <h3>Skybox & Overall Color Correction</h3>
                 <div class="gallery-card media">
-                    <ImageGallery images={skyboxImages} />
+                    <img src='{base}/images/buzz/gameplay1.png' alt='gameplay screenshot'>
+                    <img src='{base}/images/buzz/gameplay2.png' alt='gameplay screenshot'>
+                    <img src='{base}/images/buzz/gameplay3.png' alt='gameplay screenshot'>
                 </div>
             </div>
         </div>
