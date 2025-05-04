@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { onMount } from 'svelte';
     import { reveal } from 'svelte-reveal';
     import { slide } from 'svelte/transition';
@@ -108,10 +109,6 @@
         margin-right: 1rem;
         margin-top: 0rem;
     }
-    iframe {
-        width: 100%;
-        height: 60rem;
-    }
 
     .media {
         transition: transform 0.3s ease;
@@ -137,32 +134,6 @@
         overflow: hidden;
     }
 
-    #end {
-        margin-bottom: 20%;
-    }
-
-    #roles {
-        font-style: italic;
-    }
-    .playable {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        margin: 2rem 0;
-        border-radius: 8px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .playable iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
-    }
     h1, h2, h3 {
         margin-bottom: 1rem;
     }
@@ -178,26 +149,6 @@
     }
     #title{
         white-space: nowrap;
-    }
-    /* Responsive video container */
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        margin: 2rem 0;
-        border-radius: 8px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    }
-    
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
     }
 
     h1 {

@@ -1,6 +1,7 @@
 <script>
     import { theme, toggleTheme } from '$lib/stores/theme';
     import { reveal } from 'svelte-reveal';
+    import { base } from '$app/paths';
     
     let revealDelay = 60;
 </script>

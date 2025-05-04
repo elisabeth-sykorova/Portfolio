@@ -1,7 +1,8 @@
 
 <script>
     // Import components
-    import {Navigation, MouseTrail, Footer} from "$lib";
+    import { base } from '$app/paths';
+    import {Navigation, Footer} from "$lib";
     import { onMount } from 'svelte';
     import { initTheme } from '$lib/stores/theme';
     
@@ -18,7 +19,6 @@
 <!-- Page Content -->
 <main>
     <slot />
-    <MouseTrail></MouseTrail>
 </main>
 
 <!-- Footer -->

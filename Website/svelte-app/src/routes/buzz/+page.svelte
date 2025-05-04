@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { onMount } from 'svelte';
     import { reveal } from 'svelte-reveal';
     import { slide } from 'svelte/transition';
