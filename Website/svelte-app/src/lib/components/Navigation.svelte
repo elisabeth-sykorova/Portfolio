@@ -1,8 +1,8 @@
 <script>
+    import { base } from '$app/paths';
     import { reveal } from 'svelte-reveal';
     import { fade, slide, fly } from 'svelte/transition';
     import { onMount } from 'svelte';
-    import { base } from '$app/paths';
 
     let revealDelay = 60;
     let copyFeedback = false;
@@ -40,10 +40,6 @@
             });
     }
     
-    // Close menu when clicking a link (for mobile)
-    function closeMenu() {
-        menuOpen = false;
-    }
 </script>
 
 
@@ -60,7 +56,7 @@
                 <div class="email-container">
                     <button class="email-copy" on:click={copyEmail} use:reveal={{ preset: "slide", delay: revealDelay*4 }}>
                         <span class="email-symbol">@</span>
-                        <img class="copy-icon" src="{base}/images/copy.png" alt="copy icon">
+                        <img class="copy-icon" src='{base}/images/copy.png' alt='copy icon'>
                     </button>
                     {#if copyFeedback}
                     <div class="copy-feedback" transition:fade={{ duration: 300 }}>email copied</div>
