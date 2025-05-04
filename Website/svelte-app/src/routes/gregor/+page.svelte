@@ -10,7 +10,7 @@
     // Define sections for table of contents
     const tocSections = [
         { id: 'intro', title: 'Introduction', level: 2 },
-        { id: 'assets', title: 'Concept Documentat', level: 2 },
+        { id: 'assets', title: 'Concept Document', level: 2 },
         { id: 'github', title: 'Github Repository', level: 2 },
         { id: 'release', title: 'Release', level: 2 }
     ];
