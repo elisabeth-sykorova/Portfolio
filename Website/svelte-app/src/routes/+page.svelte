@@ -60,11 +60,10 @@ const project1 = {
 </script>
 <div id="page-layout">
 <div id="hero" style="position: relative; z-index: 1;">
-    <!-- <img src="/images/oliva.jpg" alt="hero"> -->
     <div class="hero-text">
         <h1 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*10 }}>Elis(abeth)</h1>
         <h2 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*11 }}>Interactive Digital Art and Design </h2>
-        <ThemeToggle />
+        <!-- <ThemeToggle /> -->
     </div>
 
     <div class="logo-container">
