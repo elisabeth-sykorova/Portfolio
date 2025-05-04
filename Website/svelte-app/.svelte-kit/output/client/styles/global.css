@@ -1,0 +1,153 @@
+/*GLOBAL CSS STYLES WITH VARIABLES*/
+@font-face {
+    font-family: BuzzFont;
+    src: url(/static/BuzzzFont.ttf);
+}
+
+:root {
+    /* Light theme (default) */
+    --primary-color: #0F0F0F; /*#38265b;*/
+    --secondary-color: hsl(0, 0%, 35%); /*#b94a20;*/ 
+    --effect-color: #e2e2e2;
+    --secondary-opacity: hsla(118, 53%, 74%, 0.712);
+    --background-color: #c0c0c0;/*#261d18;*/
+    --background-color-half: #d4d4d47a;
+    --text-color: #202020; 
+    --font-family: 'Hubot Sans', sans-serif;
+    --buzz-font: BuzzFont;
+    --base-font-size: 18px;
+    
+    /* Shared properties for both themes */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    
+    /* Pattern variables */
+    --pattern-color-1: rgba(0, 0, 0, 0.05); /* Subtle dark color for patterns */
+    --pattern-color-2: rgba(255, 255, 255, 0.1); /* Subtle light color for patterns */
+    --pattern-color-3: rgba(0, 0, 0, 0.03); /* Very subtle dark color for complex patterns */
+    --pattern-size-small: 10px;
+    --pattern-size-medium: 20px;
+    --pattern-size-large: 50px;
+
+    --small-space: 0.5rem;
+    --bigger-space: 1.25rem;
+    --medium-space: 10rem;
+    --max-width: 1200px;
+
+    --separator: 1.5px solid var(--text-color);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --primary-color: #FFFFFF;
+    --secondary-color: #b1b1b1;
+    --effect-color: #111111;
+    --secondary-opacity: hsla(118, 53%, 15%, 0.712);
+    --background-color: #121212;
+    --background-color-half: #1212127a;
+    --text-color: #EFEFEF;
+    
+    /* Pattern variables for dark theme */
+    --pattern-color-1: rgba(255, 255, 255, 0.05);
+    --pattern-color-2: rgba(0, 0, 0, 0.1);
+    --pattern-color-3: rgba(255, 255, 255, 0.03);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.5;
+}
+/* Pattern Classes - Add one of these classes to the body element to apply a pattern */
+
+/* 1. Dot Pattern */
+body.pattern-dots {
+    background-image: radial-gradient(var(--pattern-color-1) 1px, transparent 1px);
+    background-size: var(--pattern-size-medium) var(--pattern-size-medium);
+    background-position: 0 0;
+}
+
+/* 2. Diagonal Lines Pattern */
+body.pattern-lines {
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            var(--pattern-color-1),
+            var(--pattern-color-1) 1px,
+            transparent 1px,
+            transparent var(--pattern-size-medium)
+        );
+    background-size: var(--pattern-size-large) var(--pattern-size-large);
+}
+
+/* 3. Geometric Pattern */
+body.pattern-geometric {
+    background-image: 
+        linear-gradient(var(--pattern-color-1) 1px, transparent 1px),
+        linear-gradient(to right, var(--pattern-color-1) 1px, transparent 1px);
+    background-size: var(--pattern-size-large) var(--pattern-size-large);
+    background-position: center center;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 400;
+}
+a{
+    color:var(--link-color);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-medium);
+}
+
+/* Fix for background span elements */
+.background span:nth-child(0) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(1) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(2) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(3) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(4) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(5) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(6) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(7) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(8) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(9) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(10) {
+    color: var(--secondary-color);
+}
+.background span:nth-child(11) {
+    color: var(--secondary-color);
+}

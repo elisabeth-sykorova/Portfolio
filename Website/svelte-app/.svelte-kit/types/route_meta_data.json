@@ -1,0 +1,21 @@
+{
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/buzz": [
+		"src/routes/+layout.js"
+	],
+	"/gregor": [
+		"src/routes/+layout.js"
+	],
+	"/ignite": [
+		"src/routes/+layout.js"
+	],
+	"/kronoshield": [
+		"src/routes/+layout.js"
+	],
+	"/merch": [
+		"src/routes/+layout.js"
+	]
+}
