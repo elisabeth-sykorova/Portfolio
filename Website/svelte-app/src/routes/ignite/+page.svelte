@@ -34,7 +34,7 @@
         </h1>
         <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>Roles: Game Design, Game Development, Asset Creation</p>
         <div class="playable" use:reveal={{ preset: "fly", delay: revealDelay}} >
-            <iframe width="560" height="315" src="{base}https://www.youtube.com/embed/3IUzN_qDRYk?si=BZFvXBNchDVW6sfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3IUzN_qDRYk?si=BZFvXBNchDVW6sfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div id="intro">
             <h2>Introduction</h2>
@@ -56,9 +56,9 @@
 
 
         <h2 id='github'>GitHub Repository</h2>
-        <a href='{base}https://github.com/elisabeth-sykorova/IgnitePixels' class='gh-link' target="_blank"><img src='/images/github.png' alt='github logo' class='gh' >Project Repository</a>
+        <a href='https://github.com/elisabeth-sykorova/IgnitePixels' class='gh-link' target="_blank"><img src='{base}/images/github.png' alt='github logo' class='gh' >Project Repository</a>
         <h2 id='release'>Release</h2>
-        <a href='{base}https://setuo365-my.sharepoint.com/:u:/g/personal/c00301316_setu_ie/EdCnPUu9XClDlJZg4FLfWhEB26mj-G7SQSBJshnSPnmDVw?e=q1mfnQ' class='gh-link' target="_blank">Release Folder</a>
+        <a href='https://setuo365-my.sharepoint.com/:u:/g/personal/c00301316_setu_ie/EdCnPUu9XClDlJZg4FLfWhEB26mj-G7SQSBJshnSPnmDVw?e=q1mfnQ' class='gh-link' target="_blank">Release Folder</a>
         
     </div>
     

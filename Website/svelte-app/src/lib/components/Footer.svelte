@@ -27,7 +27,7 @@
             <div class="email-container">
                 <button class="email-copy" on:click={copyEmail}>
                     <span class="email-symbol">@</span>
-                    <img class="copy-icon" src="/images/copy.png" alt="copy icon">
+                    <img class="copy-icon" src="{base}/images/copy.png" alt="copy icon">
                 </button>
                 {#if copyFeedback}
                 <div class="copy-feedback" transition:fade={{ duration: 300 }}>email copied</div>
