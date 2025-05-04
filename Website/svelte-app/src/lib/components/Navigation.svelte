@@ -46,7 +46,7 @@
 <nav class="glass-nav">
     <div class="nav-container">
         <div class="nav-left">
-            <a href="{base}/" use:reveal={{ preset: "slide", delay: revealDelay }}>Elis(abeth) <img src="{base}/images/logo_prototype.png" alt="logo"></a>
+            <a href="{base}" use:reveal={{ preset: "slide", delay: revealDelay }}>Elis(abeth) <img src="{base}/images/logo_prototype.png" alt="logo"></a>
         </div>
             <div class="nav-center">
                 <a href="{base}/#work" use:reveal={{ preset: "slide", delay: revealDelay*2 }}>work</a>
@@ -56,7 +56,7 @@
                 <div class="email-container">
                     <button class="email-copy" on:click={copyEmail} use:reveal={{ preset: "slide", delay: revealDelay*4 }}>
                         <span class="email-symbol">@</span>
-                        <img class="copy-icon" src='{base}/images/copy.png' alt='copy icon'>
+                        <img class="copy-icon" src="{base}/images/copy.png" alt='copy icon'>
                     </button>
                     {#if copyFeedback}
                     <div class="copy-feedback" transition:fade={{ duration: 300 }}>email copied</div>

@@ -2,7 +2,6 @@
     import { base } from '$app/paths';
     import { onMount } from 'svelte';
     import { reveal } from 'svelte-reveal';
-    import { slide } from 'svelte/transition';
     import TableOfContents from '$lib/components/TableOfContents.svelte';
 
     let revealDelay = 60;
