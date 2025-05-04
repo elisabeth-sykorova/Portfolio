@@ -53,6 +53,7 @@
 
         <h2 id='assets'>Concept Document</h2>
         <iframe src="/images/gregor/save_gregor_concept.pdf" style="border:none;" title='save gregor concept doc'></iframe>
+        <a href='/images/gregor/save_gregor_concept.pdf' target='_blank'>Download PDF</a>
 
 
         <h2 id='github'>GitHub Repository</h2>

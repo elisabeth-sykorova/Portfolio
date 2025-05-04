@@ -53,6 +53,7 @@
 
         <h2 id='assets'>Asset Documentation</h2>
         <iframe src="/images/ignite/project-assets.pdf" style="border:none;"></iframe>
+        <a href='/images/ignite/project-assets.pdf' target='_blank'>Download PDF</a>
 
 
         <h2 id='github'>GitHub Repository</h2>
