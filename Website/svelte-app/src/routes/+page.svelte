@@ -8,19 +8,19 @@ const project1 = {
    name: "Buzzz vs The Harvesters",
    img: "buzzz.png",
    category: ["all", "games"],
-   roles: ["Art Direction", "Animation", "Font & UI", "Textures"],
-   description:"Buzzz Vs The Harvesters is a ps1-style endless runner game, similar to games such as Starfox or Panzer Dragoon.\nThis game was created for the student competition Games Fleadh 2025 and won Best in Original Art Assets award there. ",
+   roles: ["Art Direction", "Animation", "Font & UI", "Textures", "Trailer"],
+   description:"Buzzz Vs The Harvesters is a ps1-style endless runner game, similar to games such as Starfox or Panzer Dragoon.\nThis game was created for the student competition Games Fleadh 2025 and won Best in Original Art Assets award. ",
    page: "buzz"
    
  };
 
  const project2 = {
-   name: "Pixels",
-   img: "oliva.jpg",
-   category: ["all", "ui"],
-   roles: ["something"],
-   description:"Buzzz Vs The Harvesters is a ps1-style endless runner game, similar to games such as Starfox or Panzer Dragoon.\nThis game was created for the student competition Games Fleadh 2025 and won Best in Original Art Assets award there. ",
-   page: "buzz"
+   name: "Visual Identity for KronoShield",
+   img: "/ks/KS_horizontal.png",
+   category: ["all", "gd"],
+   roles: ["Visual Identity Designer"],
+   description:"Full visual identity created for a start-up company KronoShield after winning their student logo competition.",
+   page: "kronoshield"
  };
 
  let projects = [project1, project2];
@@ -57,7 +57,7 @@ const project1 = {
 <div id="category-buttons" use:reveal={{ preset: "fly", delay: revealDelay*1}}>
     <button on:click={() => chosenCategory = "all"} class:selected={chosenCategory === "all"}> All</button>
     <button on:click={() => chosenCategory = "games"} class:selected={chosenCategory === "games"}> Games</button>
-    <button on:click={() => chosenCategory = "ui"} class:selected={chosenCategory === "ui"}> Graphic Design</button>
+    <button on:click={() => chosenCategory = "gd"} class:selected={chosenCategory === "gd"}> Graphic Design</button>
 </div>
 
 </div>
@@ -150,7 +150,7 @@ const project1 = {
     }
 
     .logo-container img{
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         width:3rem;
     }
     
@@ -171,6 +171,11 @@ const project1 = {
         border-radius: 0.5rem;
         margin: 0 auto 0.8rem auto;
         display: block;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    #projects img:hover {
+        transform: scale(1.03);
     }
     
     .project-info {
@@ -189,13 +194,18 @@ const project1 = {
         display: block;
         text-align: left;
     }
+
+    .project-title:hover {
+        transform: translateY(-3px);
+        color: var(--secondary-color);
+    }
     
     #roles {
         display: flex;
         flex-wrap: wrap;
         justify-content: left;
         gap: 0.3rem;
-        margin: 0.5rem 0 1.5rem 0;  /* Reduced bottom margin */
+        margin: 1rem 0 2rem 0;  /* Reduced bottom margin */
         font-style: italic;
     }
     

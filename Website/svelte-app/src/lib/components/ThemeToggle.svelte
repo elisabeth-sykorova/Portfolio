@@ -21,19 +21,18 @@
 <style>
     .theme-toggle {
         background: none;
-        border: 1.5px solid var(--text-color);
+        border: 3px solid var(--text-color);
         color: var(--text-color);
         font-family: var(--font-family);
         font-size: 1rem;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem;
         border-radius: 20px;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.5rem;
         transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
-        margin: 1rem auto;
+        margin: 3rem auto;
     }
     
     .theme-toggle:hover {

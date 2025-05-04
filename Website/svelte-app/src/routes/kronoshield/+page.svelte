@@ -16,7 +16,7 @@
     
     // Define sections for table of contents
     const tocSections = [
-        { id: 'intro', title: 'Introduction', level: 2 },
+        { id: 'intro', title: 'Description', level: 2 },
         { id: 'animation', title: 'Animation', level: 2 },
         { id: 'animation-buzz', title: 'Buzzz', level: 3 },
         { id: 'animation-enemies', title: 'Enemies', level: 3 },
@@ -44,33 +44,19 @@
 <div class="page-layout">
     <div id="content">
         <h1 id="title" use:reveal={{ preset: "fly"}}>
-            Buzzz Vs<br>The Harvesters
+            KronoShield Visual Identity
         </h1>
-        <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>Roles: Art Direction, Animation, Font & UI, Textures, Trailer</p>
-        <div class="playable media" use:reveal={{ preset: "fly", delay: revealDelay}} >
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/26qRWZ_Tfs4?si=_KqXCan8g1bjoNjx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>Roles: Visual Identity Designer</p>
+        <div use:reveal={{ preset: "fly", delay: revealDelay}} >
+            <img src="/images/ks/KS_horizontal_transparent.png" alt='horizontal logo' class='media'>
         </div>
         <div id="intro">
             <h2>Introduction</h2>
             <p>
-                Buzzz Vs The Harvesters is a ps1-style endless runner game, similar to games such as Starfox or Panzer Dragoon.
+                This is a full visual identity created for a start-up cyber-security company KronoShield. It includes variations of logos, color palette, font, and multiple product mockups.
                 <br>
-                Buzzz is a wholesome bumblebee living in a magical forest. One day, mechanical creatures, the Harvesters, invade the forest and start stealing its natural resources by feeding on the plants. It is up to Buzzz now to save the forest.
-                <br>
-                <br>
-                This game was created for the student competition Games Fleadh 2025 and won "Best in Original Art Assets" award there.
-                <br>
-                I got to work on this project with David Hajek - 3D models artist, Pavel Dobias - 2D artist + level designer, Lucy Arthur and Robert McGregor - developers. My thanks goes to all of them.
+                I was asked to create this visual identity after joining and winning KronoShield's student logo competition they held at the end of 2024.
             </p>
-        </div>
-        <div id="software-used">
-            <h2>Tools Used:</h2>
-            <ul>
-                <li><img src='/images/blender.png'>Blender</li>
-                <li><img src='/images/ps.png'>Adobe Photoshop</li>
-                <li><img src='/images/davinci.png'>DaVinci Resolve</li>
-                <li><img src='/images/ink.png'>Inkscape</li>
-            </ul>
         </div>
 
         <div id="animation" >

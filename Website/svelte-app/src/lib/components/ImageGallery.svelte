@@ -77,7 +77,7 @@
         width: 100%;
         aspect-ratio: 16/9;
         overflow: hidden;
-        border-radius: 4px;
+        border-radius: 10px;
     }
 
     .gallery-image {
@@ -97,20 +97,17 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: var(--background-color);
-        color: var(--text-color);
-        border: 1px solid var(--text-color-soft);
+        color: var(--background-color);
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
         padding: 0.8rem;
         cursor: pointer;
-        border-radius: 50%;
         z-index: 2;
         transition: all 0.3s ease;
-        opacity: 0.7;
+        font-size: 2rem;
     }
 
     .nav-button:hover {
-        background: var(--secondary-color);
-        color: var(--tex);
         opacity: 1;
     }
 
@@ -136,7 +133,6 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background: var(--text-color-soft);
         border: none;
         cursor: pointer;
         padding: 0;
@@ -145,7 +141,6 @@
     }
 
     .dot.active {
-        background: var(--secondary-color);
         opacity: 1;
     }
 </style>
