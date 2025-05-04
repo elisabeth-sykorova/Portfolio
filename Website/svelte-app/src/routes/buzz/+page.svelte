@@ -47,7 +47,7 @@
             Buzzz Vs<br>The Harvesters
         </h1>
         <p id="roles" use:reveal={{ preset: "fly", delay: revealDelay*1}}>Roles: Art Direction, Animation, Font & UI, Textures, Trailer</p>
-        <div class="playable media" use:reveal={{ preset: "fly", delay: revealDelay}} >
+        <div class="playable" use:reveal={{ preset: "fly", delay: revealDelay}} >
             <iframe width="560" height="315" src="https://www.youtube.com/embed/26qRWZ_Tfs4?si=_KqXCan8g1bjoNjx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div id="intro">
@@ -64,7 +64,7 @@
             </p>
         </div>
         <div id="software-used">
-            <h2>Tools Used:</h2>
+            <h3>Tools Used:</h3>
             <ul>
                 <li><img src='/images/blender.png'>Blender</li>
                 <li><img src='/images/ps.png'>Adobe Photoshop</li>
@@ -193,6 +193,7 @@
     li {
         display: flex;
         align-items: center;
+        overflow: hidden;
     }
 
     #end {

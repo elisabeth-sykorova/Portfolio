@@ -16,15 +16,11 @@
     
     // Define sections for table of contents
     const tocSections = [
-        { id: 'intro', title: 'Description', level: 2 },
-        { id: 'animation', title: 'Animation', level: 2 },
-        { id: 'animation-buzz', title: 'Buzzz', level: 3 },
-        { id: 'animation-enemies', title: 'Enemies', level: 3 },
-        { id: 'animation-environment', title: 'Environment', level: 3 },
-        { id: 'texturing', title: 'Texturing', level: 2 },
-        { id: 'texturing-mushrooms', title: 'Mushrooms', level: 3 },
-        { id: 'texturing-skybox', title: 'Skybox & Color Correction', level: 3 },
-        { id: 'ui', title: 'Font & UI elements', level: 2 },
+        { id: 'intro', title: 'Introduction', level: 2 },
+        { id: 'one', title: 'Logo Variations', level: 2 },
+        { id: 'two', title: 'Color Palette', level: 2 },
+        { id: 'three', title: 'Font Choice', level: 2 },
+        { id: 'four', title: 'Product Mockups', level: 2 },
         { id: 'end', title: 'Relevant Links', level: 2 }
     ];
     
@@ -55,75 +51,78 @@
             <p>
                 This is a full visual identity created for a start-up cyber-security company KronoShield. It includes variations of logos, color palette, font, and multiple product mockups.
                 <br>
-                I was asked to create this visual identity after joining and winning KronoShield's student logo competition they held at the end of 2024.
+                I was asked to create this visual identity after winning KronoShield's student logo competition they held at the end of 2024.
             </p>
         </div>
 
-        <div id="animation" >
-            <h2>Animation</h2>
-            <p>Animated assets include the player character - Buzzz, the bumblebee, two types of enemies - Swarmer and Feeder, the harvesters, and the animated environmental assets - Mushrooms and grass.</p>
-            <br>
-            <p>All animations were created using Blender.</p>
-            <div id="animation-buzz">
-                <h3>Buzzz</h3>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xn725u_cIbU?si=2g_Pr2OijrEapBFM&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div id="animation-enemies" >
-                <div>
-                <h3>Swarmer</h3>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/J3aXm9T3Aoc?si=6zDaCH6uiFXOe76f&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                </div>
-                <div>
-                <h3>Feeder</h3>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/COWe8CeCq8Y?si=7lJBaqGorHTUk4Fd&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                </div>
-            </div>
-            <div id="animation-environment" > 
-                <h3>Environment</h3>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HpQ3h0PE6_Y?si=expNpX2rP8R-EVdZ&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-                </div>
-            </div>
+        <div id="software-used">
+            <h3>Tools Used:</h3>
+            <ul>
+                <li><img src='/images/ink.png'>Inkscape</li>
+                <li><img src='/images/penpot.png'>Penpot</li>
+            </ul>
         </div>
 
-        <div id="texturing">
-            <h2 >Texturing</h2>
-            <p>Mushroom textures, environment color correction, and skybox.</p>
-            <p>Textures were made using Photoshop with a UV wrap of the models from Blender.</p>
-            <div id="texturing-mushrooms">
-                <h3>Mushrooms</h3>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HpQ3h0PE6_Y?si=expNpX2rP8R-EVdZ&modestbranding=1&controls=0&rel=0&showinfo=0&color=white&iv_load_policy=3&playsinline=1&enablejsapi=1&loop=1&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div id="texturing-skybox">
-                <h3>Skybox & Overall Color Correction</h3>
-                <div class="gallery-card media">
-                    <ImageGallery images={skyboxImages} />
-                </div>
-            </div>
+        <div id="one" >
+
+            <h2>Logo Variations</h2>
+
+            <p>
+                The logo variations include the main - vertical - logo in multi-color, single-color, and black & white options, and the multi-color horizontal logo.
+            </p>
+                    <div id='vertical-logos'>
+                        <h3>Multi-color Vertical</h3>
+                        <img src='/images/ks/KS_multicolor_vertical.png' class='media'>
+                        <br>
+                        <h3>Single-color Vertical</h3>
+                        <img src='/images/ks/vertical_darker.png' class='media'>
+                        <img src='/images/ks/vertical_lighter.png' class='media'>
+                        <br>
+                        <h3>Black & White Vertical</h3>
+                        <img src="/images/ks/vertical_black.png" class='media'>
+                        <img src='/images/ks/vertical_white.png' class='media'>
+                    </div>
+
+
+                <h3>Horizontal Logo</h3>
+                    <img src='/images/ks/KS_horizontal_transparent.png' class='media'>
+                <div>
+        </div>
         </div>
 
-        <div id="ui">
-            <h2>Font & UI elements</h2>
-            <p>The original font was created using Inkscape with the help of the online tool <a href='https://www.calligraphr.com/'>Calligraphr</a>.</p>
-            <p>All UI elements were created using Adobe Photoshop, utilizing the original font.</p>
-            <img src="/images/buzz/font.png" alt="font showcase" class='media'>
-            <img src="/images/buzz/ui_elements.png" alt="ui elements" class='media'>
+        <div id="two">
+            <h2>Color Palette</h2>
+            <p>For the color palette I ended up choosing these blue/green shades. These colors come off as professional and trustworthy as well as open and friendly, which aligns well with the companies' goals.</p>
+            <img src='/images/ks/primary.png' alt='primary color palette' class='media'><img src='/images/ks/secondary.png' alt='secondary color palette' class='media'>
         </div>
+
+        <div id="three">
+            <h2>Font Choice</h2>
+            <p>Upon the customer's request, the chosen font is sans-serif. I ended up choosing the font Urbanist for its simplicity. </p>
+            <img src="/images/ks/font.png" alt="font showcase" class='media'>
+        </div>
+
+        <div id='four'>
+            <h2>Product Mockups</h2>
+            <p>To showcase the usage of the visual identity, I have created a few product mockups that include business card and t-shirt design concepts.</p>
+            <h3>Business Card - Colored</h3>
+            <img src='/images/ks/KS_business_card_mockup_color.png' class='media'>
+            <h3>Business Card - Black & White</h3>
+            <img src='/images/ks/KS_business_card_mockup_black_and_white.png' class = 'media'>
+            <h3> T-Shirt - White, Colored Graphics</h3>
+            <img src='/images/ks/KS_tshirt_mockup2.png' class ='media'>
+            <h3> T-Shirt - White, Black Graphics</h3>
+            <img src='/images/ks/KS_tshirt_mockup1.png' class ='media'>
+            <h3> T-Shirt - Black, White Graphics</h3>
+            <img src='/images/ks/KS_tshirt_mockup1_dark.png' class ='media'>
+
+        </div>
+
 
         <div id="end">
             <h2>Relevant Links</h2>
-            <a href="https://reverend-speed.itch.io/buzzz-vs-the-harvesters" target="_blank">Our itch.io page</a>
-            <br>
-            <a href="https://www.setu.ie/news/setu-celebrates-success-at-games-fleadh-2025" target="_blank">Article about Games Fleadh 2025</a>
+            <a href="https://design.penpot.app/#/view?file-id=cec80257-5021-8137-8005-ec22326aa22d&page-id=cec80257-5021-8137-8005-ec22326aa22e&section=interactions&index=0&share-id=cec80257-5021-8137-8005-efd66dcf8dad" target="_blank">Visual Identity Catalog on Penpot</a>
+
         </div>
     </div>
     
@@ -157,6 +156,18 @@
 
 
 <style>
+
+    #vertical-logos img{
+        max-width: 15rem;
+        border-radius: 0;
+        margin-right: 3rem;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+
+    #vertical-logos {
+        
+    }
 
     .media {
         transition: transform 0.3s ease;
@@ -212,13 +223,14 @@
     }
 
     p {
-        margin-block-end: 0rem;
+        margin-block-end: 1rem;
     }
 
     img{
-        margin-top: 5rem;
         border-radius: 10px;
         max-width: 100%;
+        margin-top: 2rem;
+
     }
     #title{
         white-space: nowrap;

@@ -53,7 +53,7 @@
         </div>
             <div class="nav-center">
                 <a href="/#work" use:reveal={{ preset: "slide", delay: revealDelay*2 }}>work</a>
-                <a href="/#cv" use:reveal={{ preset: "slide", delay: revealDelay*3 }}>cv</a>
+                <a href="/CV_Elisabeth_Sýkorová.pdf" target="_blank" use:reveal={{ preset: "slide", delay: revealDelay*3 }} class='cv-button'>cv <img class = 'download-icon' src='/images/download.png' alt='download icon'></a>
             </div>
             <div class="nav-right">
                 <div class="email-container">
@@ -98,6 +98,11 @@
 
     .nav-left img {
         height: 10px;
+        position: center;
+    }
+
+    .nav-center img {
+        height: 15px;
         position: center;
     }
 
@@ -221,6 +226,19 @@
     }
 
     .email-copy:hover .copy-icon {
+        opacity: 1;
+    }
+
+    .download-icon {
+        position: absolute;
+        height: 1.2rem;
+        width: 1.2rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        transform: translate(50%, 60%);
+    }
+
+    .cv-button:hover .download-icon {
         opacity: 1;
     }
     
