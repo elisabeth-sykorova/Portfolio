@@ -4,7 +4,6 @@
     import { reveal } from 'svelte-reveal';
     import { slide } from 'svelte/transition';
     import TableOfContents from '$lib/components/TableOfContents.svelte';
-    import ImageGallery from '$lib/components/ImageGallery.svelte';
 
     let revealDelay = 60;
 

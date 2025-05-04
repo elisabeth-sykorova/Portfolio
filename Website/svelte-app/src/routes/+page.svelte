@@ -1,6 +1,6 @@
 <script>
 import { reveal } from 'svelte-reveal';
-import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+// import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 import { base } from '$app/paths';
 let revealDelay = 60;
 
