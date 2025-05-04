@@ -58,11 +58,11 @@
         <img src='{base}/images/merch/Merch_Store_Moodboard.png' alt='moodboard' class='media'>
 
         <h2 id='website'>Live Website</h2>
-        <a href='{base}https://david-hajek.github.io/Web-UI-Design-Group-Project/' target='_blank'>Merchandise Website</a>
+        <a href='https://david-hajek.github.io/Web-UI-Design-Group-Project/' target='_blank'>Merchandise Website</a>
 
 
         <h2 id='github'>GitHub Repository</h2>
-        <a href='{base}https://github.com/David-Hajek/Web-UI-Design-Group-Project' class='gh-link' target="_blank"><img src='{base}/images/github.png' alt='github logo' class='gh'>Project Repository</a>
+        <a href='https://github.com/David-Hajek/Web-UI-Design-Group-Project' class='gh-link' target="_blank"><img src='{base}/images/github.png' alt='github logo' class='gh'>Project Repository</a>
     
     </div>
     

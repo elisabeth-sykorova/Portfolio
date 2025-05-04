@@ -1,6 +1,7 @@
 <script>
     import { reveal } from 'svelte-reveal';
     import { fade } from 'svelte/transition';
+    import { base } from '$app/paths';
 
     let revealDelay = 60;
     let copyFeedback = false;
@@ -32,7 +33,7 @@
                 <div class="copy-feedback" transition:fade={{ duration: 300 }}>email copied</div>
                 {/if}
             </div>
-            <a class="icon" href="https://www.linkedin.com/in/elisabeth-sykorova-7a2981354/" target="_blank"><img class="social-icon" src="/images/linkedin.png" alt="linked in icon"></a>
+            <a class="icon" href="https://www.linkedin.com/in/elisabeth-sykorova-7a2981354/" target="_blank"><img class="social-icon" src="{base}/images/linkedin.png" alt="linked in icon"></a>
         </div>
     </div>
 </footer>

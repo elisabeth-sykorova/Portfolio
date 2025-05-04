@@ -7,7 +7,7 @@ let revealDelay = 60;
 
 const project1 = {
    name: "Buzzz vs The Harvesters",
-   img: "buzzz.png",
+   img: `${base}/images/buzzz.png`,
    category: ["all", "games"],
    roles: ["Art Direction", "Animation", "Font & UI", "Textures", "Trailer"],
    description:"Buzzz Vs The Harvesters is a ps1-style endless runner game, similar to games such as Starfox or Panzer Dragoon.\nThis game was created for the student competition Games Fleadh 2025 and won Best in Original Art Assets award. ",
@@ -17,7 +17,7 @@ const project1 = {
 
  const project2 = {
    name: "Visual Identity for KronoShield",
-   img: "/ks/KS_horizontal.png",
+   img: `${base}/images/ks/KS_horizontal.png`,
    category: ["all", "gd"],
    roles: ["Visual Identity Designer"],
    description:"Full visual identity created for a start-up company KronoShield after winning their student logo competition.",
@@ -26,7 +26,7 @@ const project1 = {
 
  const project3 = {
    name: "Ignite Pixels",
-   img: "ignite_pixels.png",
+   img: `${base}/images/ignite_pixels.png`,
    category: ["all", "games"],
    roles: ['Game Design', 'Game Development', 'Asset Creation'],
    description:'First year university project joint between C++ programming and game art featuring colorful pixel art and action gameplay. (page creation in progress)',
@@ -35,7 +35,7 @@ const project1 = {
 
  const project4 = {
    name: "Save Gregor",
-   img: "gregor.png",
+   img: `${base}/images/gregor.png`,
    category: ["all", "games"],
    roles: ['Game Design', 'Game Development', 'Art Direction', 'Font & UI'],
    description:'First year university project joint between C++ programming and game art featuring colorful pixel art and action gameplay. (page creation in progress)',
@@ -44,7 +44,7 @@ const project1 = {
 
  const project5 = {
    name: "Merchandise Website",
-   img: "merch.png",
+   img: `${base}/images/merch.png`,
    category: ["all", "web"],
    roles: ['Web Design', 'Web Development'],
    description:'Web development project, second year at SETU. (page creation in progress)',
@@ -99,7 +99,7 @@ const project1 = {
   <div id="entire-project" style="position: relative; z-index: 1;">
     <div id="projects">
         <a href="{base}/{project.page}">
-        <img src="{base}/images/{project.img}" alt="project">
+        <img src="{project.img}" alt="project">
         </a>
     <div class="project-info">
         <a href="{base}/{project.page}" class="project-title">{project.name}</a>

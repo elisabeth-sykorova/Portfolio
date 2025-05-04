@@ -116,7 +116,7 @@
 
         <div id="end">
             <h2>Relevant Links</h2>
-            <a href="{base}https://design.penpot.app/#/view?file-id=cec80257-5021-8137-8005-ec22326aa22d&page-id=cec80257-5021-8137-8005-ec22326aa22e&section=interactions&index=0&share-id=cec80257-5021-8137-8005-efd66dcf8dad" target="_blank">Visual Identity Catalog on Penpot</a>
+            <a href="https://design.penpot.app/#/view?file-id=cec80257-5021-8137-8005-ec22326aa22d&page-id=cec80257-5021-8137-8005-ec22326aa22e&section=interactions&index=0&share-id=cec80257-5021-8137-8005-efd66dcf8dad" target="_blank">Visual Identity Catalog on Penpot</a>
 
         </div>
     </div>

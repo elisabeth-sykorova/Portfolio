@@ -2,6 +2,7 @@
     import { reveal } from 'svelte-reveal';
     import { fade, slide, fly } from 'svelte/transition';
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
 
     let revealDelay = 60;
     let copyFeedback = false;
@@ -49,24 +50,24 @@
 <nav class="glass-nav">
     <div class="nav-container">
         <div class="nav-left">
-            <a href="/" use:reveal={{ preset: "slide", delay: revealDelay }}>Elis(abeth) <img src="/images/logo_prototype.png" alt="logo"></a>
+            <a href="{base}/" use:reveal={{ preset: "slide", delay: revealDelay }}>Elis(abeth) <img src="{base}/images/logo_prototype.png" alt="logo"></a>
         </div>
             <div class="nav-center">
-                <a href="/#work" use:reveal={{ preset: "slide", delay: revealDelay*2 }}>work</a>
-                <a href="/CV_Elisabeth_Sýkorová.pdf" target="_blank" use:reveal={{ preset: "slide", delay: revealDelay*3 }} class='cv-button'>cv <img class = 'download-icon' src='/images/download.png' alt='download icon'></a>
+                <a href="{base}/#work" use:reveal={{ preset: "slide", delay: revealDelay*2 }}>work</a>
+                <a href="{base}/CV_Elisabeth_Sýkorová.pdf" target="_blank" use:reveal={{ preset: "slide", delay: revealDelay*3 }} class='cv-button'>cv <img class = 'download-icon' src='{base}/images/download.png' alt='download icon'></a>
             </div>
             <div class="nav-right">
                 <div class="email-container">
                     <button class="email-copy" on:click={copyEmail} use:reveal={{ preset: "slide", delay: revealDelay*4 }}>
                         <span class="email-symbol">@</span>
-                        <img class="copy-icon" src="/images/copy.png" alt="copy icon">
+                        <img class="copy-icon" src="{base}/images/copy.png" alt="copy icon">
                     </button>
                     {#if copyFeedback}
                     <div class="copy-feedback" transition:fade={{ duration: 300 }}>email copied</div>
                     {/if}
                 </div>
                 <a class="icon" href="https://www.linkedin.com/in/elisabeth-sykorova-7a2981354/" target="_blank" use:reveal={{ preset: "slide", delay: revealDelay*4 }}>
-                    <img class="social-icon" src="/images/linkedin.png" alt="linked in icon">
+                    <img class="social-icon" src="{base}/images/linkedin.png" alt="linked in icon">
                 </a>
             </div>
         </div>
