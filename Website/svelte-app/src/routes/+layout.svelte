@@ -1,15 +1,7 @@
 
 <script>
     // Import components
-    import { base } from '$app/paths';
     import {Navigation, Footer} from "$lib";
-    import { onMount } from 'svelte';
-    import { initTheme } from '$lib/stores/theme';
-    
-    onMount(() => {
-        // Initialize theme on client-side
-        initTheme();
-    });
 </script>
 
 <!-- Header -->

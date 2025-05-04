@@ -36,7 +36,7 @@
     --separator: 1.5px solid var(--text-color);
 }
 
-/* Dark theme */
+/* Dark theme
 [data-theme="dark"] {
     --primary-color: #FFFFFF;
     --secondary-color: #b1b1b1;
@@ -47,10 +47,10 @@
     --text-color: #EFEFEF;
     
     /* Pattern variables for dark theme */
-    --pattern-color-1: rgba(255, 255, 255, 0.05);
+    /* --pattern-color-1: rgba(255, 255, 255, 0.05);
     --pattern-color-2: rgba(0, 0, 0, 0.1);
     --pattern-color-3: rgba(255, 255, 255, 0.03);
-}
+} */ 
 
 *{
     margin: 0;

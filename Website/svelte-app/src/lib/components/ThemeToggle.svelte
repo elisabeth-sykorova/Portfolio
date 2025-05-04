@@ -1,5 +1,5 @@
-<script>
-    import { theme, toggleTheme } from '$lib/stores/theme';
+<!-- <script>
+    // import { theme, toggleTheme } from '$lib/stores/theme';
     import { reveal } from 'svelte-reveal';
     import { base } from '$app/paths';
     
@@ -46,4 +46,4 @@
         display: inline-flex;
         font-size: 1.2rem;
     }
-</style>
+</style> -->
