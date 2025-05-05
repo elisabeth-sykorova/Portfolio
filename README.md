@@ -1,7 +1,9 @@
 Web Portfolio by Elisabeth Sykorova (2025)
 ------------------------------------------------------------
 Modules: Web UI Design + UI Prototyping
+
 Student ID: C00301316
+
 Submission date: 04/05/2025 (documentation added 05/05/2025)
 ------------------------------------------------------------
 
