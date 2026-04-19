@@ -9,19 +9,19 @@ const project1 = {
    img: `${base}/images/buzzz.png`,
    category: ["all", "games"],
    roles: ["Art Direction", "Animation", "Font & UI", "Textures", "Trailer"],
-   description:"Buzzz Vs The Harvesters is a ps1-style endless runner game, similar to games such as Starfox or Panzer Dragoon.\nThis game was created for the student competition Games Fleadh 2025 and won Best in Original Art Assets award. ",
+   description:'Winning student project created for the Games Fleadh 2025 competition, awarded "Best in Original Art Assets".\nBuzzz Vs The Harvesters is a ps1-style endless runner game where you play as a bumblebee with big weapons, Buzz, protecting your magical mushroom forest from artifical insect invaders, the Harvesters. Entirely made with raylib.',
    page: "buzz"
    
  };
 
- const project2 = {
-   name: "Visual Identity for KronoShield",
-   img: `${base}/images/ks/KS_horizontal.png`,
-   category: ["all", "gd"],
-   roles: ["Visual Identity Designer"],
-   description:"Full visual identity created for a start-up company KronoShield after winning their student logo competition.",
-   page: "kronoshield"
- };
+//  const project2 = {
+//    name: "Visual Identity for KronoShield",
+//    img: `${base}/images/ks/KS_horizontal.png`,
+//    category: ["all", "gd"],
+//    roles: ["Visual Identity Designer"],
+//    description:"Full visual identity created for a start-up company KronoShield after winning their student logo competition.",
+//    page: "kronoshield"
+//  };
 
  const project3 = {
    name: "Ignite Pixels",
@@ -41,16 +41,25 @@ const project1 = {
    page: "gregor"
  };
 
- const project5 = {
-   name: "Merchandise Website",
-   img: `${base}/images/merch.png`,
-   category: ["all", "web"],
-   roles: ['Web Design', 'Web Development'],
-   description:'Web development project, second year at SETU. (page creation in progress)',
-   page: "merch"
+ const projectASilentHero = {
+    name: "A Silent Hero",
+    img: `${base}/images/asilentherothumb.png`,
+    category: ["all", "games"],
+    roles: ['Game Design, Art Assets, Animations, Audio Creation, Narrative Design'],
+    description: 'Winning student project created for Animation Dingle 2026 for the "Game Sting" category, sponsored by Story Toys.\n A Silent Hero is a narrative-driven, fable-themed side-scroller, focused on the visuals, audio, and narrative.',
+    page: "asilenthero"
  };
 
- let projects = [project1, project2, project3, project4, project5];
+//  const project5 = {
+//    name: "Merchandise Website",
+//    img: `${base}/images/merch.png`,
+//    category: ["all", "web"],
+//    roles: ['Web Design', 'Web Development'],
+//    description:'Web development project, second year at SETU. (page creation in progress)',
+//    page: "merch"
+//  };
+
+ let projects = [projectASilentHero, project1, project3, project4];
 
  let chosenCategory = "all";
 
@@ -65,10 +74,17 @@ const project1 = {
         <h2 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*11 }}>Interactive Digital Art and Design </h2>
         <!-- <ThemeToggle /> -->
     </div>
+    <video class= "hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    style="position: absolute; inset: 0; object-fit: cover; z-index: -1;"
+  >
+    <source src={base + '/VisualClock.mp4'} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-    <div class="logo-container">
-        <img class="logo" src="{base}/images/logo_prototype.png" alt="logo" use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*12 }}>
-    </div>
 </div>
 
 <div id="intro" use:reveal={{ preset: "fly"}}>
@@ -153,19 +169,25 @@ const project1 = {
     
     /* Hero section */
     .hero-text {
-        margin-top: 15%;
+        margin-top: 0;
         text-align: center;
-        color: var(--text-color);
+        color: white;
+        text-shadow: 1px 1px 5px black;
         width: 100%;
     }
     
     .hero-text h1 {
         margin: 0;
         font-size: 3rem;
+        
+    }
+    .hero-video {
+        visibility: hidden;
     }
     
     .hero-text h2 {
         font-size: 1.1rem;
+        
     }
     
     .logo-container {
@@ -306,6 +328,8 @@ const project1 = {
         position: relative;
         z-index: 1;
         padding: 0 1rem;
+        color: white;
+        text-shadow: 1px 1px 5px black;
     }
     
     /* CV section */
@@ -333,6 +357,12 @@ const project1 = {
         .hero-text {
             margin-top: 17%;
             font-size: 4rem;
+            
+        }
+
+        .hero-video {
+            margin-top: -15%;
+            visibility: visible;
         }
         
         .hero-text h1 {
@@ -341,6 +371,7 @@ const project1 = {
         
         .hero-text h2 {
             font-size: 2.25rem;
+            
         }
         
         .logo-container {
@@ -349,7 +380,7 @@ const project1 = {
         }
         
         #projects {
-            margin-left: 20%;
+            margin-left: 12%;
             margin-top: 7rem;
             margin-right: auto;
             flex-direction: row;
@@ -358,9 +389,9 @@ const project1 = {
         }
         
         #projects img {
-            width: 37rem;
+            width: 50rem;
             max-width: none;
-            border-radius: 2rem;
+            border-radius: 0.5rem;
             margin: 0;
         }
         
