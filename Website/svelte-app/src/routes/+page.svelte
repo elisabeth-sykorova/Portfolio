@@ -106,9 +106,6 @@ const project1 = {
 </div>
 
 <div id="intro" use:reveal={{ preset: "fly"}}>
-<p>
-    Student of Interactive Digital Art and Design, based in Czech Republic and Ireland.
-</p>
 </div>
 
 
