@@ -14,14 +14,14 @@ const project1 = {
    
  };
 
-//  const project2 = {
-//    name: "Visual Identity for KronoShield",
-//    img: `${base}/images/ks/KS_horizontal.png`,
-//    category: ["all", "gd"],
-//    roles: ["Visual Identity Designer"],
-//    description:"Full visual identity created for a start-up company KronoShield after winning their student logo competition.",
-//    page: "kronoshield"
-//  };
+  const project2 = {
+   name: "Visual Identity for KronoShield",
+   img: `${base}/images/ks/KS_horizontal.png`,
+  category: ["all", "digital art"],
+   roles: ["Visual Identity Designer"],
+    description:"Full visual identity created for a start-up company KronoShield after winning their student logo competition.",
+    page: "kronoshield"
+ };
 
  const project3 = {
    name: "Ignite Pixels",
@@ -50,6 +50,15 @@ const project1 = {
     page: "asilenthero"
  };
 
+  const projectVisualClock = {
+    name: "Visual Clock",
+    img: `${base}/images/visualclock.png`,
+    category: ["all", "digital art"],
+    roles: ['Photography', 'Video Editing', 'Audio'],
+    description: 'Personal project on the theme "Visual Clock"',
+    page: "visualclock"
+ };
+
 //  const project5 = {
 //    name: "Merchandise Website",
 //    img: `${base}/images/merch.png`,
@@ -59,7 +68,7 @@ const project1 = {
 //    page: "merch"
 //  };
 
- let projects = [projectASilentHero, project1, project3, project4];
+ let projects = [projectASilentHero, projectVisualClock, project1, project3, project4, project2];
 
  let chosenCategory = "all";
 
@@ -99,8 +108,7 @@ const project1 = {
 <div id="category-buttons" use:reveal={{ preset: "fly", delay: revealDelay*1}}>
     <button on:click={() => chosenCategory = "all"} class:selected={chosenCategory === "all"}> All</button>
     <button on:click={() => chosenCategory = "games"} class:selected={chosenCategory === "games"}> Games</button>
-    <button on:click={() => chosenCategory = "gd"} class:selected={chosenCategory === "gd"}> Graphic Design</button>
-    <button on:click={() => chosenCategory = "web"} class:selected={chosenCategory === "web"}> Web</button>
+    <button on:click={() => chosenCategory = "digital art"} class:selected={chosenCategory === "da"}> Digital Art</button>
 </div>
 
 </div>
