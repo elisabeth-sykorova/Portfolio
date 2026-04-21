@@ -59,6 +59,15 @@ const project1 = {
     page: "visualclock"
  };
 
+   const projectWhoDinedHere = {
+    name: "Who Dined Here?",
+    img: `${base}/images/whodinedhere/who-dined-here.png`,
+    category: ["all", "digital art"],
+    roles: ['Photography', 'Graphical Design'],
+    description: 'Original Photography Zine',
+    page: "whodinedhere"
+ };
+
 //  const project5 = {
 //    name: "Merchandise Website",
 //    img: `${base}/images/merch.png`,
@@ -68,7 +77,7 @@ const project1 = {
 //    page: "merch"
 //  };
 
- let projects = [projectASilentHero, projectVisualClock, project1, project3, project4, project2];
+ let projects = [projectASilentHero, projectVisualClock, projectWhoDinedHere, project1, project3, project4, project2];
 
  let chosenCategory = "all";
 
