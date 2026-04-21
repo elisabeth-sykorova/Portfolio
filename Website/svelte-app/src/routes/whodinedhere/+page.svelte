@@ -40,14 +40,14 @@
       // Generate the list of image paths
   const pages2 = Array.from({ length: 20 }, (_, i) => {
     const num = String(i + 1).padStart(2, "0");
-    return `/images/whodinedhere/who-dined-here-${num}.png`;
+    return `${base}/images/whodinedhere/who-dined-here-${num}.png`;
   });
 
 
   // Generate the list of image paths
   const pages = Array.from({ length: 20 }, (_, i) => {
     const num = String(i + 1).padStart(2, "0");
-    return `/images/whodinedhere/who-dined-here-${num}.png`;
+    return `${base}/images/whodinedhere/who-dined-here-${num}.png`;
   });
 
   // Build spreads:
