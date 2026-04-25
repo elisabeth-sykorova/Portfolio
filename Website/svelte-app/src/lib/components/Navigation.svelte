@@ -46,7 +46,8 @@
 <nav class="glass-nav">
     <div class="nav-container">
         <div class="nav-left">
-            <a href="{base}/" use:reveal={{ preset: "slide", delay: revealDelay }}>Elis(abeth) <img src="{base}/images/logo_prototype.png" alt="logo"></a>
+            <a href="{base}/" use:reveal={{ preset: "slide", delay: revealDelay }}>Elis(abeth) </a>
+            <!-- <img src="{base}/images/logo_prototype.png" alt="logo"> -->
         </div>
             <div class="nav-center">
                 <a href="{base}/#work" use:reveal={{ preset: "slide", delay: revealDelay*2 }}>work</a>

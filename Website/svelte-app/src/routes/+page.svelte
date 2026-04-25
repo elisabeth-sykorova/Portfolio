@@ -4,39 +4,39 @@ import { reveal } from 'svelte-reveal';
 import { base } from '$app/paths';
 let revealDelay = 60;
 
-const project1 = {
+const projectBuzz = {
    name: "Buzzz vs The Harvesters",
    img: `${base}/images/buzzz.png`,
    category: ["all", "games"],
-   roles: ["Art Direction", "Animation", "Font & UI", "Textures", "Trailer"],
+   roles: ["Art Direction,", "Animation,", "Font & UI,", "Textures,", "Trailer"],
    description:'Winning student project created for the Games Fleadh 2025 competition, awarded "Best in Original Art Assets".\nBuzzz Vs The Harvesters is a ps1-style endless runner game where you play as a bumblebee with big weapons, Buzz, protecting your magical mushroom forest from artifical insect invaders, the Harvesters. Entirely made with raylib.',
    page: "buzz"
    
  };
 
-  const project2 = {
+  const projectKrono = {
    name: "Visual Identity for KronoShield",
    img: `${base}/images/ks/KS_horizontal.png`,
   category: ["all", "digital art"],
-   roles: ["Visual Identity Designer"],
+   roles: ["Visual Identity Design"],
     description:"Full visual identity created for a start-up company KronoShield after winning their student logo competition.",
     page: "kronoshield"
  };
 
- const project3 = {
+ const projectIgnite = {
    name: "Ignite Pixels",
    img: `${base}/images/ignite_pixels.png`,
    category: ["all", "games"],
-   roles: ['Game Design', 'Game Development', 'Asset Creation'],
+   roles: ['Game Design,', 'Game Development,', 'Asset Creation'],
    description:'First year university project joint between C++ programming and game art featuring colorful pixel art and action gameplay. (page creation in progress)',
    page: "ignite"
  };
 
- const project4 = {
+ const projectGregor = {
    name: "Save Gregor",
    img: `${base}/images/gregor.png`,
    category: ["all", "games"],
-   roles: ['Game Design', 'Game Development', 'Art Direction', 'Font & UI'],
+   roles: ['Game Design,', 'Game Development,', 'Art Direction,', 'Font & UI'],
    description:'First year university project joint between C++ programming and game art featuring colorful pixel art and action gameplay. (page creation in progress)',
    page: "gregor"
  };
@@ -45,7 +45,7 @@ const project1 = {
     name: "A Silent Hero",
     img: `${base}/images/asilentherothumb.png`,
     category: ["all", "games"],
-    roles: ['Game Design, Art Assets, Animations, Audio Creation, Narrative Design'],
+    roles: ['Game Design,', 'Art Assets,', 'Animations,','Audio Creation,','Narrative Design'],
     description: 'Winning student project created for Animation Dingle 2026 for the "Game Sting" category, sponsored by Story Toys.\n A Silent Hero is a narrative-driven, fable-themed side-scroller, focused on the visuals, audio, and narrative.',
     page: "asilenthero"
  };
@@ -54,7 +54,7 @@ const project1 = {
     name: "Visual Clock",
     img: `${base}/images/visualclock.png`,
     category: ["all", "digital art"],
-    roles: ['Photography', 'Video Editing', 'Audio'],
+    roles: ['Photography,', 'Video Editing,', 'Audio'],
     description: 'Personal project on the theme "Visual Clock"',
     page: "visualclock"
  };
@@ -63,11 +63,28 @@ const project1 = {
     name: "Who Dined Here?",
     img: `${base}/images/whodinedhere/who-dined-here.png`,
     category: ["all", "digital art"],
-    roles: ['Photography', 'Graphical Design'],
+    roles: ['Photography,', 'Graphical Design'],
     description: 'Original Photography Zine',
     page: "whodinedhere"
  };
 
+    const projectTimeless = {
+    name: "Timeless Record Player",
+    img: `${base}/timeless/timeless_thumb.png`,
+    category: ["all", "games"],
+    roles: ['Design,', 'Development'],
+    description: 'Interactive Experience',
+    page: "timelessrecordplayer"
+ };
+
+    const projectMole = {
+    name: "Mole Patrol",
+    img: `${base}/mole/mole-patrol_thumb.png`,
+    category: ["all", "games"],
+    roles: ['UI Elements,', 'Low poly 3D models'],
+    description: 'A couple of art assets I created for the mobile game Mole Patrol.',
+    page: "molepatrol"
+ };
 //  const project5 = {
 //    name: "Merchandise Website",
 //    img: `${base}/images/merch.png`,
@@ -77,7 +94,7 @@ const project1 = {
 //    page: "merch"
 //  };
 
- let projects = [projectASilentHero, projectVisualClock, projectWhoDinedHere, project1, project3, project4, project2];
+ let projects = [projectASilentHero, projectVisualClock, projectWhoDinedHere, projectBuzz, projectIgnite,  projectGregor,projectTimeless, projectMole, projectKrono];
 
  let chosenCategory = "all";
 
@@ -133,7 +150,7 @@ const project1 = {
         <a href="{base}/{project.page}" class="project-title">{project.name}</a>
         <div class="project-description">{project.description}</div>
         <div id="roles" >
-            <p>Roles:</p>
+            <p>Worked on:</p>
             {#each project.roles as role}
             <span>{role}</span>
             {/each}
@@ -273,7 +290,7 @@ const project1 = {
     }
     
     #roles span {
-        font-size: 0.85rem;
+        font-size: 1rem;
         margin: 0.2rem;
         background-color: rgba(var(--text-color-rgb), 0.1);
         border-radius: 1rem;
@@ -380,7 +397,7 @@ const project1 = {
         }
         
         .hero-text h1 {
-            font-size: 4rem;
+            font-size: 6rem;
         }
         
         .hero-text h2 {
@@ -416,7 +433,7 @@ const project1 = {
         }
         
         .project-description {
-            width: 50%;
+            width: 75%;
             margin-right: 40%;  /* Ensure this is consistently applied */
             margin-left: 0;
             text-align: left;
@@ -425,15 +442,16 @@ const project1 = {
         }
         
         .project-title {
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align: left;
         }
         
         #roles {
             justify-content: flex-start;
-            gap: 1rem;
+            gap: 0.2rem;
             margin-top: 2rem;
             margin-bottom: 5rem;
+            font-size: 1.05rem;
         }
         
         .project-list {
@@ -460,7 +478,7 @@ const project1 = {
         
         button {
             font-family: var(--font-family);
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             border-radius: 15px;
             border-color: rgba(240, 248, 255, 0);
             padding: 0.2rem;
@@ -474,13 +492,13 @@ const project1 = {
         button.selected {
             color: var(--background-color);
             background-color: var(--text-color);
-            font-size: 1.5rem;
+            font-size: 1.75rem;
         }
         
         button:hover, button:focus {
             color: var(--background-color);
             background-color: var(--text-color);
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             cursor: pointer;
         }
         

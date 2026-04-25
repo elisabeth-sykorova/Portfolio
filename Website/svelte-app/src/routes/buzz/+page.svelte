@@ -120,9 +120,11 @@
                 <h3>Skybox & Overall Color Correction</h3>
                 <div class="gallery-card media">
                     <img src='{base}/images/buzz/gameplay1.png' alt='gameplay screenshot'>
-                    <img src='{base}/images/buzz/gameplay2.png' alt='gameplay screenshot'>
-                    <img src='{base}/images/buzz/gameplay3.png' alt='gameplay screenshot'>
                 </div>
+                <div class="gallery-card media">
+                    <img src='{base}/images/buzz/gameplay2.png' alt='gameplay screenshot'></div>
+                    <div class="gallery-card media">
+                    <img src='{base}/images/buzz/gameplay3.png' alt='gameplay screenshot'></div>
             </div>
         </div>
 
