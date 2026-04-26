@@ -37,24 +37,23 @@
         });
     });
 </script>
-<div>
+<div id="content">
 <h1>
     Visual Clock Project
 </h1>
-<p>A creative project with the abstract and open prompt "Create Visual Clock"</p>
+<p>A creative project with the abstract and open prompt "Create a visual clock. This project is heavily inspired by cut-out stop-motion animations, which I digitally recreated. All photographs in the video are my original work, as well as the background audio. The narrative of the looping video reflects how I feel as a univeristy student in this day and age that must also work part(full)-time to afford being a student! The pictures were taken by my iPhone 12 mini, taken into Photoshop, cut out, and then animated in DaVinci Resolve.</p>
+
 </div>
-<div>
+
     <video class= "hero-video"
-    autoplay
-    muted
     loop
     playsinline
-    style="position:; inset: 0; object-fit: cover; z-index: -1; max-width: 70%; align-content:center;"
+    controls
+    style="inset: 0; object-fit: cover; z-index: -1; max-width: 70%;"
   >
-    <source src={base + '/VisualClock.mp4'} type="video/mp4" />
+    <source src="{base + '/VisualClock.mp4'}" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
-</div>
 
 <style>
         h1 {
@@ -62,4 +61,21 @@
         font-size: 4rem;
         display: flex;
     }
+    p {
+        margin-bottom: 3rem;
+    }
+    #content {
+        display: block;
+        max-width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .hero-video{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+
 </style>

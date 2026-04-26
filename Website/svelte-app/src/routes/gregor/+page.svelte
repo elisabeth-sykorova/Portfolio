@@ -39,7 +39,9 @@
         <div id="intro">
             <h2>Introduction</h2>
             <p>
-                Save Gregor.
+                Save Gregor is a small project developed in C++, SFML. It is a comedic adaptation of the ending (spoiler alert) of the book Metamorphosis by Franz Kafka.
+            <br>This is a point and click mini-game, where your goal is to protect the randomly moving and turning cockroach Gregor from flying apples that otherwise harm him.
+            <br>Though it is a small game, it came out exactly as it was concepted and designed, and its visuals are clean and polished.
             </p>
         </div>
         <div id="software-used">

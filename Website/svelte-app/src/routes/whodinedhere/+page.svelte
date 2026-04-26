@@ -73,6 +73,7 @@
 <p>
   "Who Dined Here?" is a mixed-media zine created using original photography captured on my iPhone 12 mini, and digital elements added in Photoshop. What this zine is about is entirely up to your own interpretation!
 </p>
+<p> Flip through the Zine here:</p>
 </div>
 </div>
 

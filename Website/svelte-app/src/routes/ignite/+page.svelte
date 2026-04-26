@@ -39,7 +39,8 @@
         <div id="intro">
             <h2>Introduction</h2>
             <p>
-                This project was created at the end of first year at SETU. It was a joint project between C++ object-oriented programming and Game Art.
+                This is my first "bigger" pixel art creaton. I created all the assets and animations for Ignite Pixels, as well as developed it in C++, SFML.
+                <br> This project was a part of my first year at South East Technological University, degree in Bachelors (Honours) in Computing in Interactive Digital Art and Design.
             </p>
         </div>
         <div id="software-used">

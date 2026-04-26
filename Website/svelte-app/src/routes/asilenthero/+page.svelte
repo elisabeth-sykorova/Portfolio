@@ -61,7 +61,10 @@ How closely you watch, and what choices you make, will shape your journey.</p>
     </div>
 </div>
 
-
+<!-- <div class="playable" use:reveal={{ preset: "fly", delay: revealDelay}} >
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3IUzN_qDRYk?si=BZFvXBNchDVW6sfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div> -->
+        
 
 <div id="screenshots">
     <img src='{base}/images/asilenthero/ash-path.png' alt='gameplay screenshot'>
@@ -73,6 +76,15 @@ How closely you watch, and what choices you make, will shape your journey.</p>
 </div>
 
 <style>
+    iframe {
+        margin-top: 10rem;
+        height: 830px;
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 #screenshots img{
     width: 100%;
     display: block;

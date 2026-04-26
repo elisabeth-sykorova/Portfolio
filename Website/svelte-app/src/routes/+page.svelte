@@ -73,7 +73,7 @@ const projectBuzz = {
     img: `${base}/timeless/timeless_thumb.png`,
     category: ["all", "games"],
     roles: ['Design,', 'Development'],
-    description: 'Interactive Experience',
+    description: 'A small creative interactive experience. This was a small project where I first tried developing "a game" using C++.',
     page: "timelessrecordplayer"
  };
 
@@ -82,7 +82,7 @@ const projectBuzz = {
     img: `${base}/mole/mole-patrol_thumb.png`,
     category: ["all", "games"],
     roles: ['UI Elements,', 'Low poly 3D models'],
-    description: 'A couple of art assets I created for the mobile game Mole Patrol.',
+    description: 'A couple of art assets I created for the mobile game Mole Patrol, including UI icons, origial font, and low-poly 3D models.',
     page: "molepatrol"
  };
 //  const project5 = {
@@ -94,7 +94,7 @@ const projectBuzz = {
 //    page: "merch"
 //  };
 
- let projects = [projectASilentHero, projectVisualClock, projectWhoDinedHere, projectBuzz, projectIgnite,  projectGregor,projectTimeless, projectMole, projectKrono];
+ let projects = [projectASilentHero, projectVisualClock, projectWhoDinedHere, projectBuzz, projectMole, projectIgnite, projectGregor, projectTimeless, projectKrono];
 
  let chosenCategory = "all";
 
@@ -206,13 +206,13 @@ const projectBuzz = {
         margin-top: 0;
         text-align: center;
         color: rgb(255, 255, 255);
-        text-shadow: 0px 10px 13px black;
         width: 100%;
     }
     
     .hero-text h1 {
         margin: 0;
         font-size: 3rem;
+        text-shadow: 0px 10px 13px black;
         
     }
     .hero-video {
@@ -221,7 +221,7 @@ const projectBuzz = {
     
     .hero-text h2 {
         font-size: 1.1rem;
-        
+        text-shadow: 0px 5px 5px black;
     }
     
     .logo-container {
@@ -363,7 +363,7 @@ const projectBuzz = {
         z-index: 1;
         padding: 0 1rem;
         color: white;
-        text-shadow: 0px 5px 5px black;
+        text-shadow: 0px 3px 3px black;
     }
     
     /* CV section */

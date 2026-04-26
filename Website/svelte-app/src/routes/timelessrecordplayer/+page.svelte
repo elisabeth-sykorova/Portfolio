@@ -38,11 +38,54 @@
     });
 </script>
 
+<div id="content">
+<h1>
+    Timeless Recordplayer
+</h1>
+
+<p>Small creative project; my first experience coding a "game" in C++ SFML. It is an interactive experience where you can ascroll through albums, pick one, take the vinyl, and play it on the recordplayer. All assets, including the custom font, are hand-crafted by me. :)</p>
+
+
+<p>How it looks:</p>
+<video 
+    src="{base}/timeless/TimelessRecordplayer.mov" 
+    autoplay 
+    loop 
+    muted 
+    playsinline 
+    style="width:100%; height:auto;">
+</video>
+<p>Art Documentation:</p>
 <iframe
   src="{base}/timeless/Timeless-Record-Player_ASSETS.pdf#toolbar=0&navpanes=0&scrollbar=0"
   style="border: none; width: 100%; height: 100vh;"
 ></iframe>
+</div>
 
 <style>
+
+        h1 {
+        margin-top: 10%;
+        font-size: 4rem;
+        display: flex;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
+    #content {
+        display: block;
+        max-width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+video{
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0rem;
+    margin-bottom: 5rem;
+}
 
 </style>

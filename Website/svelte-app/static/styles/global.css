@@ -8,9 +8,9 @@
     /* Light theme (default) */
     --primary-color: #0F0F0F; /*#38265b;*/
     --secondary-color: hsl(0, 0%, 35%); /*#b94a20;*/ 
-    --effect-color: #e7e7e7;
+    --effect-color: #e6e6e6;
     --secondary-opacity: hsla(120, 27%, 84%, 0.712);
-    --background-color: #dddddd;/*#261d18;*/
+    --background-color: #b8b8b8;/*#261d18;*/
     --background-color-half: #d4d4d47a;
     --text-color: #1b1b1b; 
     --font-family: 'Chelsea Market', system-ui;
