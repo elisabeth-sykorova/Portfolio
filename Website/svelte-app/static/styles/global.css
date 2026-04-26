@@ -4,6 +4,7 @@
     src: url(/static/BuzzzFont.ttf);
 }
 
+
 :root {
     /* Light theme (default) */
     --primary-color: #0F0F0F; /*#38265b;*/
