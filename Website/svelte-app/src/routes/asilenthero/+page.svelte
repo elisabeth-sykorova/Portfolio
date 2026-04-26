@@ -39,7 +39,7 @@
 </script>
 
 <div class="hero">
-    <img src="/images/asilenthero/splash.png" alt="" class="hero-bg">
+    <img src="{base}/images/asilenthero/splash.png" alt="" class="hero-bg">
 
     <div id="content">
 
