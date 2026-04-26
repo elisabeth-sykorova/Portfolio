@@ -46,12 +46,12 @@
 <nav class="glass-nav">
     <div class="nav-container">
         <div class="nav-left">
-            <a href="{base}/" use:reveal={{ preset: "slide", delay: revealDelay }}>Elis(abeth) </a>
+            <a href="{base}/" use:reveal={{ preset: "slide", delay: revealDelay }}><img src="{base}/ES.png" alt="logo"></a>
             <!-- <img src="{base}/images/logo_prototype.png" alt="logo"> -->
         </div>
             <div class="nav-center">
-                <a href="{base}/#work" use:reveal={{ preset: "slide", delay: revealDelay*2 }}>work</a>
-                <a href="{base}/CV_Elisabeth_Sýkorová.pdf" target="_blank" use:reveal={{ preset: "slide", delay: revealDelay*3 }} class='cv-button'>cv <img class = 'download-icon' src='{base}/images/download.png' alt='download icon'></a>
+                <a href="{base}/#work" use:reveal={{ preset: "slide", delay: revealDelay*2 }}>Work</a>
+                <a href="{base}/Elisabeth-Sykorova_CV.pdf" target="_blank" use:reveal={{ preset: "slide", delay: revealDelay*3 }} class='cv-button'>CV <img class = 'download-icon' src='{base}/images/download.png' alt='download icon'></a>
             </div>
             <div class="nav-right">
                 <div class="email-container">
@@ -95,7 +95,8 @@
     }
 
     .nav-left img {
-        height: 10px;
+        margin-top: 5px;
+        height: 35px;
         position: center;
     }
 
@@ -105,7 +106,7 @@
     }
 
     .social-icon {
-        height: 2.2rem;
+        height: 2.7rem;
         width: auto;
         vertical-align: middle;
     }
@@ -127,7 +128,7 @@
     .nav-container {
         display: flex;
         align-items: center;
-        font-size: 20px;
+        font-size: 22px;
         width: 100%;
         margin: 0;
         padding: 0.25rem 1rem;
@@ -148,7 +149,6 @@
         justify-content: center;
         gap: 2rem;
         margin-right: 0;
-        transform: translateX(-20%);
     }
     
     .nav-right {
@@ -178,7 +178,6 @@
         background: none;
         border: none;
         color: var(--text-color);
-        font-size: 20px;
         cursor: pointer;
         padding: 0.2rem;
         margin: 0;
@@ -200,13 +199,13 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 23px;
+        font-size: 35px;
     }
 
     .copy-icon {
         position: absolute;
-        height: 1.2rem;
-        width: 1.2rem;
+        height: 1.6rem;
+        width: 1.6rem;
         opacity: 0;
         transition: opacity 0.3s ease;
         top: 50%;
@@ -229,8 +228,6 @@
 
     .download-icon {
         position: absolute;
-        height: 1.2rem;
-        width: 1.2rem;
         opacity: 0;
         transition: opacity 0.3s ease;
         transform: translate(50%, 60%);

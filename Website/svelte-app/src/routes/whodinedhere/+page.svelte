@@ -65,14 +65,19 @@
 
 
 </script>
-
-
-<h1>
+<div class="page-layout">
+<div id="content">
+<h1 id="title">
     Who Dined Here?
 </h1>
+<p>
+  "Who Dined Here?" is a mixed-media zine created using original photography captured on my iPhone 12 mini, and digital elements added in Photoshop. What this zine is about is entirely up to your own interpretation!
+</p>
+</div>
+</div>
 
 <div>
-    <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="yes" class="fp-iframe" src="https://heyzine.com/flip-book/a2eeefa23b.html" style="border: 100px solid lightgray; width: 100%; height: 990px;"></iframe>
+    <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="yes" class="fp-iframe" src="https://heyzine.com/flip-book/a2eeefa23b.html"></iframe>
 </div>
 
 <div>
@@ -86,19 +91,19 @@
   {/each}
 </div>
 
-
-
-
-
-<p>Original Photography Zine</p>
 </div>
 
 <style>
+.fp-iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10rem;
+  border: 0px solid lightgray;
+  width: 100%;
+  height: 830px;
 
-
-
-
-
+}
   .zine-gallery {
     max-width: 1000px;
     margin: 0 auto;
@@ -107,6 +112,11 @@
     flex-direction: column;
     gap: 10rem;
   }
+    #content {
+       flex: 1;
+        max-width: 800px;
+        align-content: center;
+    }
 
   .spread {
     display: flex;
@@ -116,15 +126,118 @@
     width: 50%;
     display: block;
   }
-
-  
-
-
         h1 {
         margin-top: 2%;
         margin-bottom: 10%;
         font-size: 4rem;
         display: flex;
+    }
+
+        .media {
+        transition: transform 0.3s ease;
+    }
+
+    .media:hover {
+        transform: scale(1.15);
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+    li img{
+        margin-top: 0rem;
+        height: 2rem;
+        margin-right: 0.5rem;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    #end {
+        margin-bottom: 20%;
+    }
+
+    #roles {
+        font-style: italic;
+    }
+    h1, h2, h3 {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-block-end: 3rem;
+    }
+    #title{
+        white-space: nowrap;
+    }
+    /* Responsive video container */
+
+    h1 {
+        margin-top: 10%;
+        font-size: 4rem;
+        display: flex;
+    }
+
+    h2 {
+        margin-top: 10%;
+        scroll-margin-top: 100px; /* Add spacing for anchor links */
+    }
+
+    h3 {
+        margin-top: 10%;
+        scroll-margin-top: 100px; /* Add spacing for anchor links */
+    }
+
+    .page-layout {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    #content {
+        flex: 1;
+        max-width: 800px;
+    }
+    
+    .toc-sidebar {
+        flex: 0 0 250px;
+        margin-left: 2rem;
+    }
+    
+    .mobile-toc {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 1000;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .page-layout {
+            display: block;
+            padding: 0 1rem;
+        }
+
+        #content {
+            max-width: 100%;
+        }
+
+        .mobile-toc {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 1000;
+        }
+
+        #title {
+            font-size: 3rem;
+        }
+        div {
+            margin-top: 20%;
+        }
     }
 
 </style>

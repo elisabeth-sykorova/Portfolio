@@ -38,15 +38,101 @@
     });
 </script>
 
-<h1>
-    A Silent Hero
-</h1>
-<a href="https://elisyko.itch.io/a-silent-hero" target="_blank">A Silent Hero on itch.io</a>
+<div class="hero">
+    <img src="/images/asilenthero/splash.png" alt="" class="hero-bg">
+
+    <div id="content">
+
+
+        <h1>A Silent Hero</h1>
+
+
+        <p>    A Silent Hero is a narrative-driven, fable-themed side-scroller.<br>
+You play as the silent Little Lamb, living in a quaint town on Ireland’s southwestern
+coast. One day, you are chosen to slay the monster An Phiast.
+Follow your path and uncover the untold story of An Phiast, but remember!<br>
+You have no voice, so only your actions can speak for you.
+How closely you watch, and what choices you make, will shape your journey.</p>
+
+
+        <p id="link">Play "A Silent Hero" here: <a href="https://elisyko.itch.io/a-silent-hero" target="_blank">A Silent Hero on itch.io</a></p>
+
+
+    </div>
+</div>
+
+
+
+<div id="screenshots">
+    <img src='{base}/images/asilenthero/ash-path.png' alt='gameplay screenshot'>
+    <img src='{base}/images/asilenthero/ash-store.png' alt='gameplay screenshot'>
+    <img src='{base}/images/asilenthero/tsh-fox.png' alt='gameplay screenshot'>
+    <img src='{base}/images/asilenthero/ash-town.png' alt='gameplay screenshot'>
+    <img src='{base}/images/asilenthero/tsh-forest.png' alt='gameplay screenshot'>
+    <img src='{base}/images/asilenthero/tsh-cave.png' alt='gameplay screenshot'>
+</div>
 
 <style>
+#screenshots img{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
         h1 {
         margin-top: 10%;
         font-size: 4rem;
         display: flex;
+    }
+/* Full-width hero section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* adjust height as needed */
+    overflow: hidden;
+}
+
+/* Full-width background image */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 1; /* full opacity */
+}
+
+/* Centered text container on top of the image */
+#content {
+    position: relative;
+    z-index: 1;
+    max-width: 60%;
+    margin: 0 auto;
+    margin-left: 55%;
+    padding-top: 10%;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6); /* improves readability */
+}
+
+/* Screenshots below the hero */
+#screenshots img {
+    width: 60%;
+    margin: auto;
+    display: block;
+    margin: 3rem auto 1rem auto;
+}
+    p {
+        margin-bottom: 2rem;
+        max-width: 80%;
+    }
+    #link{
+        font-style: italic;
+        font-size: 20px;
+    }
+
+    a{
+        text-decoration: underline;
     }
 </style>

@@ -107,6 +107,9 @@ const projectBuzz = {
     <div class="hero-text">
         <h1 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*10 }}>Elis(abeth)</h1>
         <h2 use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*11 }}>Interactive Digital Art and Design </h2>
+        <div class="logo-container">
+        <img src="{base}/ES_white.png" alt="logo" use:reveal={{ preset: "fly", duration: 800, delay: revealDelay*12 }}>
+        </div>
         <!-- <ThemeToggle /> -->
     </div>
     <video class= "hero-video"
@@ -168,7 +171,7 @@ const projectBuzz = {
 
 <div id="cv-download" use:reveal={{ preset: "fly"}}>
 <h2 id="cv">
-<a href="{base}/CV_Elisabeth_Sýkorová.pdf" target="_blank" >cv<img src="{base}/images/download.png" alt="download button icon" id="download-icon"></a>
+<a href="{base}/Elisabeth-Sykorova_CV.pdf" target="_blank" >cv<img src="{base}/images/download.png" alt="download button icon" id="download-icon"></a>
 </h2>
 </div>
 </div>
@@ -202,8 +205,8 @@ const projectBuzz = {
     .hero-text {
         margin-top: 0;
         text-align: center;
-        color: white;
-        text-shadow: 1px 1px 5px black;
+        color: rgb(255, 255, 255);
+        text-shadow: 0px 10px 13px black;
         width: 100%;
     }
     
@@ -360,7 +363,7 @@ const projectBuzz = {
         z-index: 1;
         padding: 0 1rem;
         color: white;
-        text-shadow: 1px 1px 5px black;
+        text-shadow: 0px 5px 5px black;
     }
     
     /* CV section */
@@ -386,7 +389,7 @@ const projectBuzz = {
         }
         
         .hero-text {
-            margin-top: 17%;
+            margin-top: 15%;
             font-size: 4rem;
             
         }
@@ -407,7 +410,9 @@ const projectBuzz = {
         
         .logo-container {
             margin-top: 5rem;
-            width: 5rem;
+            height: 3rem;
+            filter: drop-shadow(5px 5px 5px #0f0f0f);
+
         }
         
         #projects {
@@ -417,6 +422,7 @@ const projectBuzz = {
             flex-direction: row;
             align-items: flex-start;
             gap: 1rem; /* Adds space between the image and text */
+            
         }
         
         #projects img {
@@ -424,12 +430,14 @@ const projectBuzz = {
             max-width: none;
             border-radius: 0.5rem;
             margin: 0;
+            filter: drop-shadow(3px 3px 3px #222222);
         }
         
         .project-info {
             text-align: left;
             width: 100%;  /* Changed from auto to 100% */
             padding-right: 0;  /* Remove any padding */
+            padding-left: 2rem;
         }
         
         .project-description {
@@ -487,6 +495,7 @@ const projectBuzz = {
             background-color: var(--background-color);
             color: var(--text-color);
             transition: font-size 0.6s ease, color 0.6s ease, background-color 0.6s ease;
+            filter: drop-shadow(2px 2px 2px #222);
         }
         
         button.selected {
@@ -547,9 +556,6 @@ const projectBuzz = {
         text-decoration: none;
         transform: translateY(-3px);
         color: var(--secondary-color);
-    }
-    .logo {
-        transform: rotate(90deg);
     }
 
     /* Animation for background elements */

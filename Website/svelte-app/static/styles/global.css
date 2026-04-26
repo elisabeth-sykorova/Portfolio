@@ -8,11 +8,11 @@
     /* Light theme (default) */
     --primary-color: #0F0F0F; /*#38265b;*/
     --secondary-color: hsl(0, 0%, 35%); /*#b94a20;*/ 
-    --effect-color: #e2e2e2;
-    --secondary-opacity: hsla(118, 53%, 74%, 0.712);
-    --background-color: #c0c0c0;/*#261d18;*/
+    --effect-color: #e7e7e7;
+    --secondary-opacity: hsla(120, 27%, 84%, 0.712);
+    --background-color: #dddddd;/*#261d18;*/
     --background-color-half: #d4d4d47a;
-    --text-color: #202020; 
+    --text-color: #1b1b1b; 
     --font-family: 'Chelsea Market', system-ui;
     --buzz-font: BuzzFont;
     --base-font-size: 18px;
