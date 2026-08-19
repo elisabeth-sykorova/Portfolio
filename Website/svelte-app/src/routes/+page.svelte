@@ -85,6 +85,14 @@ const projectBuzz = {
     description: 'A couple of art assets I created for the mobile game Mole Patrol, including UI icons, origial font, and low-poly 3D models.',
     page: "molepatrol"
  };
+    const projectPalacinka = {
+    name: "Palacinka",
+    img: `${base}/images/palacinka/palacinka-hero.png`,
+    category: ["all", "games"],
+    roles: ['Art Direction,', 'Animation,', 'Character Design,', 'Visual Design', 'UI'],
+    description: 'Game-jam style game made at Tecnocampus under the assignment "run-and-gun comic book game". Page development in progress!',
+    page: "palacinka"
+ };
 //  const project5 = {
 //    name: "Merchandise Website",
 //    img: `${base}/images/merch.png`,
@@ -94,7 +102,7 @@ const projectBuzz = {
 //    page: "merch"
 //  };
 
- let projects = [projectASilentHero, projectVisualClock, projectWhoDinedHere, projectBuzz, projectMole, projectIgnite, projectGregor, projectTimeless, projectKrono];
+ let projects = [projectASilentHero, projectPalacinka, projectVisualClock, projectWhoDinedHere, projectBuzz, projectMole, projectIgnite, projectGregor, projectTimeless, projectKrono];
 
  let chosenCategory = "all";
 
